@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "1.索引/VUE.md",
+            "file": "README.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1.索引/VUE.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,7 @@
   },
   "active": "cb5a7decdf4ad832",
   "lastOpenFiles": [
+    "README.md",
     "1.索引/VUE.md",
     "1.索引/面试.md",
     "2.笔记/堆.md",
@@ -97,7 +98,6 @@
     "2.笔记/eslint.md",
     "2.笔记/CommonJS 转化为 ESM.md",
     "2.笔记/构造函数.md",
-    "2.笔记/分析前端打包体积.md",
-    "2.笔记/非 Javascript 资源加载.md"
+    "2.笔记/分析前端打包体积.md"
   ]
 }
