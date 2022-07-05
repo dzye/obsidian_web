@@ -1,0 +1,103 @@
+{
+  "main": {
+    "id": "9d32457de91c740f",
+    "type": "split",
+    "children": [
+      {
+        "id": "cb5a7decdf4ad832",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "1.索引/VUE.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a90e0efd348cda36",
+    "type": "split",
+    "children": [
+      {
+        "id": "45036601428196ca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a7d57775c8e8a826",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "b0e56521e3e0c9b5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 337
+  },
+  "right": {
+    "id": "c36fefa676696690",
+    "type": "split",
+    "children": [
+      {
+        "id": "3824f7c306c8e545",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4c6e1e35653f5d48",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "1.索引/VUE.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "cb5a7decdf4ad832",
+  "lastOpenFiles": [
+    "1.索引/VUE.md",
+    "1.索引/面试.md",
+    "2.笔记/堆.md",
+    "1.索引/数据结构与算法.md",
+    "1.索引/前端工程化.md",
+    "2.笔记/eslint.md",
+    "2.笔记/CommonJS 转化为 ESM.md",
+    "2.笔记/构造函数.md",
+    "2.笔记/分析前端打包体积.md",
+    "2.笔记/非 Javascript 资源加载.md"
+  ]
+}
