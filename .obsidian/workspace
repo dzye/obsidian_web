@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "2.笔记/栈.md",
+            "file": "1.索引/Typescript.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2.笔记/栈.md",
+                "file": "1.索引/Typescript.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "cb5a7decdf4ad832",
   "lastOpenFiles": [
+    "1.索引/Typescript.md",
+    "1.索引/JavaScript高级.md",
+    "1.索引/面试.md",
     "2.笔记/栈.md",
     "1.索引/数据结构与算法.md",
     "2.笔记/函数执行作用域.md",
-    "1.索引/JavaScript高级.md",
-    "1.索引/面试.md",
     "README.md",
     "1.索引/VUE.md",
     "2.笔记/堆.md",
-    "1.索引/前端工程化.md",
-    "2.笔记/eslint.md"
+    "1.索引/前端工程化.md"
   ]
 }
