@@ -14,6 +14,30 @@
             "source": false
           }
         }
+      },
+      {
+        "id": "3b4ed2ae81629c4c",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "2.笔记/typescript数据类型.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "edfc83f3e84524dc",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "2.笔记/typescript数据类型.md",
+            "mode": "source",
+            "source": false
+          }
+        }
       }
     ],
     "direction": "vertical"
@@ -69,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1.索引/Typescript.md",
+                "file": "2.笔记/typescript数据类型.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,8 +111,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "cb5a7decdf4ad832",
+  "active": "3b4ed2ae81629c4c",
   "lastOpenFiles": [
+    "2.笔记/typescript数据类型.md",
     "1.索引/Typescript.md",
     "1.索引/JavaScript高级.md",
     "1.索引/面试.md",
@@ -97,7 +122,6 @@
     "2.笔记/函数执行作用域.md",
     "README.md",
     "1.索引/VUE.md",
-    "2.笔记/堆.md",
-    "1.索引/前端工程化.md"
+    "2.笔记/堆.md"
   ]
 }
