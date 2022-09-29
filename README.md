@@ -2,3 +2,6 @@
 
 
 
+productDetailHidden
+priceDetailHidden
+buyDetailHidden
