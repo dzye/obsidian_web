@@ -1,7 +1,0 @@
-# obsidian
-
-
-
-productDetailHidden
-priceDetailHidden
-buyDetailHidden
