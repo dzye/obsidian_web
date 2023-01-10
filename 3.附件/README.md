@@ -9,7 +9,7 @@
 
 
 
-
+0:正常进入 1:扫码 2:链接
 **枚举说明**: 
 ACTIVITY_VIEW_SCAN :活动浏览（扫码） 
 ACTIVITY_VIEW_LINK :活动浏览（链接） 
@@ -19,9 +19,18 @@ PRODUCT_VIEW_LINK :商品浏览（链接）
 PRODUCT_VIEW :商品浏览
 
 
+// 数据埋点进入页面接口
 
+entryPage
+{
+	eventKey:主键id
+	pageUrl:路由
+	eventType: 枚举说明
+}
 
+// 数据埋点离开页面接口
 
+leavePage   params:eventId 主键id, departureType :离开类型 DEFAULT :默认 PURCHASE :购买
 ```
 
 
