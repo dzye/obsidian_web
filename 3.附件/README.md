@@ -1,13 +1,17 @@
 ```
+.u-drawer-content {
 
-childFamilyMemberId: this.currentChild.childMemberId,
+  border-radius: 36rpx 36rpx 0 0;
+
+}
+.u-select__header,.u-select__body{
 
 
-computed: {
+ font-size: 34rpx;
 
-...mapState(["currentChild"]),
+}
+.u-select__body{
 
-},
+}
 
-import { mapState } from "vuex";
 ```
