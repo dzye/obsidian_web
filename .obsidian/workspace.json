@@ -4,14 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "63e63d99229aea3e",
+        "id": "4f50904ae7084242",
         "type": "tabs",
         "children": [
           {
-            "id": "edfc83f3e84524dc",
+            "id": "4f4f380a1e92c8a2",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {}
             }
           }
@@ -99,7 +99,7 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "edfc83f3e84524dc",
+  "active": "a7d57775c8e8a826",
   "lastOpenFiles": [
     "3.附件/README.md",
     "1.索引/html.md",
