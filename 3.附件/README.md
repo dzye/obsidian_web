@@ -74,4 +74,26 @@ pc平台端
 /enjo-user/admin/api/platform/user/find/userAllListByMerchantId
 /enjo-album/admin/album/edit/teacher/V2.2.1
 /enjo-album/admin/album/add/members/V2.2.1
+/enjo-album/admin/album/remove/members
+/enjo-album/admin/album/add/photo/V2.2.1
+/enjo-album/admin/album/find/photos/V2.2.1
+/enjo-album/admin/album/find/personal/draftPhotos
+/enjo-album/admin/album/delete/photo/V2.2.1
+/enjo-album/admin/album/memberInfo/${albumId}/V2.2.1
+/enjo-album/admin/album/find/group/draftPhotos
+/enjo-album/admin/album/recall/moment
+/enjo-album/admin/album/searchMerchantPhoto
+/enjo-course/admin/course/class-member/setMemberV2
+/enjo-course/admin/course/member/merchantMember
+/enjo-course/admin/course/class/list
+/enjo-course/admin/course/class/status
+/enjo-course/admin/course/class -post
+/enjo-course/admin/course/class -put
+/enjo-course/admin/course/class-member
+/enjo-course/admin/course/member/listPage
+/enjo-course/admin/course/classroom
+/enjo-course/admin/course/class-member
+/enjo-course/admin/course
+/enjo-course/admin/course/class-schedule -get
+/enjo-course/admin/course/class-schedule
 ```
