@@ -16,6 +16,8 @@ pc平台端
 /enjo-customer/admin/platform/api/customer/info?customerId=${customerId}
 /enjo-customer/admin/api/customer/update/user/status
 /enjo-customer/admin/platform/api/customer/markTest
+/enjo-marketing/admin/api/platform/coupon/create
+/enjo-marketing/admin/api/platform/coupon/delete
 ```
 未使用接口
 ```
@@ -149,4 +151,6 @@ pc平台端
 /enjo-merchant/admin/api/merchant/info
 /enjo-user/admin/api/platform/user/find/userList
 /enjo-infra/admin/api/file/getSignature
+/enjo-user/admin/api/user/token/renew
+/enjo-customer/admin/api/customer/platform/list
 ```
