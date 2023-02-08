@@ -153,4 +153,23 @@ pc平台端
 /enjo-infra/admin/api/file/getSignature
 /enjo-user/admin/api/user/token/renew
 /enjo-customer/admin/api/customer/platform/list
+/enjo-marketing/admin/api/platform/coupon/getList
+/enjo-course/admin/course/total
+/enjo-course/admin/course/class-schedule/daily
+/enjo-course/admin/course/class-schedule/weekly
+/enjo-course/admin/course/campus/add
+/enjo-course/admin/course/campus/update
+/enjo-course/admin/course/campus/isEdit/${campuId}/V2.2
+/enjo-course/admin/course/campus/principals
+/enjo-user/admin/api/platform/user/find/userAllListByMerchantId
+/enjo-course/admin/course/campus/list
+/enjo-course/admin/course/campus/status
+/enjo-course/admin/course/campus/total
+/enjo-course/admin/course/classroom/list
+/enjo-course/admin/course/classroom - post
+/enjo-course/admin/course/classroom - put
+/enjo-course/admin/course/classroom - get
+/enjo-course/admin/course/classroom/status
+/enjo-course/admin/course/course-category - post
+/enjo-course/admin/course/course-category - put
 ```
