@@ -21,4 +21,16 @@ pc平台端
 ```
 /enjo-goods/admin/api/product/groupactivity/selectCustomer
 /enjo-goods/admin/api/product/queryProductCustomer
+/enjo-goods/admin/api/product/groupactivity/add
+/enjo-goods/admin/api/product/groupactivity/update
+/enjo-goods/admin/api/product/groupactivity/delete
+/enjo-goods/admin/api/title/select
+/enjo-goods/admin/api/title/add
+/enjo-goods/admin/api/title/update
+/enjo-goods/admin/api/title/delete
+/enjo-merchant/admin/activitySite/listPage
+/enjo-merchant/admin/activitySite/nameList
+/enjo-merchant/admin/activitySite/add
+/enjo-merchant/admin/activitySite/update
+/enjo-merchant/admin/activitySite/updateStatus
 ```
