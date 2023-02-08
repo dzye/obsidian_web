@@ -79,7 +79,8 @@ pc平台端
 /enjo-user/admin/api/platform/area/operate
 /enjo-user/admin/api/platform/areaAdmin/add
 /enjo-user/admin/api/platform/areaAdmin/update
-
+/enjo-user/admin/api/platform/areaAdmin/list
+/enjo-user/admin/api/platform/areaAdmin/operate
 ```
 未使用接口
 ```
