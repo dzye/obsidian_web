@@ -238,4 +238,8 @@ pc平台端
 /enjo-user/admin/api/user/register/V2.2
 /enjo-merchant/admin/api/merchant/apply/submitApply
 /enjo-user/admin/api/area/queryAllArea
+/enjo-merchant/admin/api/merchant/apply/findHistory
+/enjo-merchant/admin/api/merchant/apply/confirm
+/enjo-user/admin/api/user/reset/password/V2.2
+/enjo-user/admin/api/user/forget/password/V2.2
 ```
