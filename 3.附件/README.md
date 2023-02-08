@@ -42,6 +42,11 @@ pc平台端
 /enjo-marketing/admin/api/platform/coupon/getDetail
 /enjo-marketing/admin/api/platform/coupon/sendRecord
 /enjo-marketing/admin/api/platform/coupon/update
+/enjo-goods/admin/product/merchant/getList
+enjo-goods/admin/platform/api/product/list
+/enjo-goods/admin/product/platform/create
+/enjo-goods/admin/product/platform/update
+/enjo-goods/admin/product/platform/getDetail
 ```
 未使用接口
 ```
@@ -365,4 +370,26 @@ pc平台端
 /enjo-marketing/admin/api/coupon/package/delete
 /enjo-marketing/admin/api/coupon/package/listPage
 /enjo-goods/admin/product/merchant/create
+/enjo-goods/admin/product/merchant/update
+/enjo-goods/admin/product/merchant/getDetail
+/enjo-goods/admin/product/merchant/status
+/enjo-goods/admin/product/platform/upJob
+/enjo-goods/admin/product/platform/downJob
+/enjo-goods/admin/product/merchant/existing-popularity-rank
+/enjo-goods/admin/product/platform/updatePopularityRank
+/enjo-goods/admin/product/platform/updateLatestnessRank
+/enjo-goods/admin/product/platform/updateCategoryAndTag
+/enjo-goods/admin/api/merchant/createOrUpdate
+/enjo-infra/admin/api/file/upload
+/enjo-goods/admin/merchant/product/update
+/enjo-goods/admin/api/product/new
+/enjo-goods/merchant/enums/productCatalog
+/enjo-goods/admin/product/category/getDetail
+api/product/new
+/enjo-goods/admin/api/tag/getChildList
+api/tag/getConnTagList
+/enjo-goods/admin/api/tag/insetTagConn
+/enjo-goods/admin/api/tag/deleteConnTag
+/enjo-goods/admin/api/product/package - get
+/enjo-goods/admin/api/product/package - post
 ```
