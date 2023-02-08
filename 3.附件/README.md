@@ -172,4 +172,42 @@ pc平台端
 /enjo-course/admin/course/classroom/status
 /enjo-course/admin/course/course-category - post
 /enjo-course/admin/course/course-category - put
+/enjo-course/admin/course/course-category/status
+/enjo-course/admin/course/course-category/list
+/enjo-course/admin/course/material
+/enjo-course/admin/course/material/list
+/enjo-course/admin/course/material/status
+/enjo-course/admin/course/material
+/enjo-course/admin/course/class/list
+/enjo-course/admin/course/class - post
+/enjo-course/admin/course/class - put
+/enjo-course/admin/course/class/status
+/enjo-course/admin/course/list
+/enjo-course/admin/course/class-schedule - get
+/enjo-course/admin/course/class-schedule - post
+/enjo-course/admin/course/class-member - get
+/enjo-course/admin/course/class-member - post
+/clue/clue/listPge
+/course
+/enjo-course/admin/course/course-material/createOrUpdate
+/enjo-course/admin/course/course-material/list
+/enjo-course/admin/course/member/listPage
+/enjo-course/admin/course/member
+/enjo-course/admin/course/findAll/V2.2
+/enjo-course/admin/course/list/V2.2
+/enjo-course/admin/course/campus/total/V2.2
+/enjo-course/admin/course/addMember/V2.2
+/enjo-course/admin/course/removeMember/${courseId}/${memberId}/V2.2
+/enjo-course/admin/course/detail/${courseId}/V2.2
+/enjo-course/admin/course/add/V2.2
+/enjo-course/admin/course/edit/V2.2
+/enjo-course/admin/course/getInvitationQRCode
+/enjo-course/admin/course/list
+/enjo-course/admin/course/course-category/total/one
+/enjo-course/admin/course/course-category/total/second
+/enjo-course/admin/course - post
+/enjo-course/admin/course/status
+/enjo-course/admin/course - put
+/enjo-course/admin/course - get
+/enjo-course/admin/course/course-material/add
 ```
