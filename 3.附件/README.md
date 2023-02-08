@@ -18,6 +18,10 @@ pc平台端
 /enjo-customer/admin/platform/api/customer/markTest
 /enjo-marketing/admin/api/platform/coupon/create
 /enjo-marketing/admin/api/platform/coupon/delete
+/enjo-customer/admin/api/customer-events
+/enjo-customer/admin/api/customer-events/statistics
+/enjo-marketing/admin/api/customer/coupons
+/enjo-user/admin/api/user/codeLoginPlatform
 ```
 未使用接口
 ```
@@ -210,4 +214,23 @@ pc平台端
 /enjo-course/admin/course - put
 /enjo-course/admin/course - get
 /enjo-course/admin/course/course-material/add
+/enjo-customer/admin/api/curriculum/add
+/enjo-customer/admin/api/curriculum/listPage
+/enjo-customer/admin/api/family/getFamilySmallListByCurriculumId
+/enjo-customer/admin/api/figure/bed/diary/info
+/enjo-customer/admin/api/figure/bed/diary/getByCurriculumId
+/enjo-customer/admin/api/curriculum/info
+/enjo-customer/admin/api/curriculum/update
+/enjo-customer/admin/api/curriculum/deleted
+/enjo-customer/admin/api/figure/bed/diary/deleted
+/enjo-customer/admin/api/figure/bed/diary/update
+/enjo-customer/admin/api/figure/bed/diary/add
+/enjo-customer/admin/api/curriculum/exportCurriculumOrder
+/enjo-customer/admin/api/figure/bed/diary/getInvitationCode
+/enjo-album/admin/moment/list
+/enjo-album/admin/moment/operate
+/enjo-user/admin/api/user/codeLogin/V2.2
+/enjo-user/admin/api/user/isNewUser/${phone}/V2.2
+/enjo-user/admin/api/user/init/password/V2.2
+/enjo-user/admin/api/user/info
 ```
