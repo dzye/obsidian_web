@@ -11,7 +11,7 @@
             "id": "4f4f380a1e92c8a2",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {}
             }
           }
@@ -99,17 +99,17 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "a7d57775c8e8a826",
+  "active": "4f4f380a1e92c8a2",
   "lastOpenFiles": [
-    "3.附件/README.md",
     "1.索引/html.md",
+    "1.索引/ES6+.md",
+    "1.索引/数据结构与算法.md",
+    "3.附件/README.md",
     "1.索引/面试.md",
     "1.索引/CSS.md",
     "1.索引/VUE.md",
     "1.索引/JavaScript高级.md",
-    "1.索引/ES6+.md",
     "1.索引/Typescript.md",
-    "2.笔记/hybrid.md",
-    "1.索引/数据结构与算法.md"
+    "2.笔记/hybrid.md"
   ]
 }
