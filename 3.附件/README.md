@@ -63,4 +63,15 @@ pc平台端
 /enjo-marketing/admin/api/banners/operationBanners/update
 /api/merchant/stbusiness/query
 /enjo-marketing/admin/api/banners/operationBanners/delete
+/enjo-merchant/admin/api/merchant/queryallmerchant
+/enjo-marketing/admin/api/share/statisticsByUser
+/enjo-marketing/admin/api/share/statisticsByActivity
+/enjo-marketing/admin/api/share/statisticsBySale
+/enjo-album/admin/album/add/V2.2.1
+/enjo-album/admin/album/page/V2.2.1
+/enjo-course/admin/course/class-schedule/searchVirtualSchedule
+/enjo-course/admin/course/findCourseCalendar/${courseId}
+/enjo-user/admin/api/platform/user/find/userAllListByMerchantId
+/enjo-album/admin/album/edit/teacher/V2.2.1
+/enjo-album/admin/album/add/members/V2.2.1
 ```
