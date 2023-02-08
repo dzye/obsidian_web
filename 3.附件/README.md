@@ -22,6 +22,7 @@ pc平台端
 /enjo-customer/admin/api/customer-events/statistics
 /enjo-marketing/admin/api/customer/coupons
 /enjo-user/admin/api/user/codeLoginPlatform
+/enjo-user/admin/api/user/ruleMenu
 ```
 未使用接口
 ```
@@ -233,4 +234,8 @@ pc平台端
 /enjo-user/admin/api/user/isNewUser/${phone}/V2.2
 /enjo-user/admin/api/user/init/password/V2.2
 /enjo-user/admin/api/user/info
+/enjo-user/admin/api/user/register
+/enjo-user/admin/api/user/register/V2.2
+/enjo-merchant/admin/api/merchant/apply/submitApply
+/enjo-user/admin/api/area/queryAllArea
 ```
