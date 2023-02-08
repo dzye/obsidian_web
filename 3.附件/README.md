@@ -12,8 +12,8 @@ pc平台端
 /enjo-user/admin/api/platform/role/update
 /enjo-user/admin/api/platform/role/info
 /enjo-customer/admin/platform/api/customer/list
-/enjo-order/admin/platform/api/order/listByCustomer?customerId=${customerId}
-/enjo-customer/admin/platform/api/customer/info?customerId=${customerId}
+/enjo-order/admin/platform/api/order/listByCustomer
+/enjo-customer/admin/platform/api/customer/info
 /enjo-customer/admin/api/customer/update/user/status
 /enjo-customer/admin/platform/api/customer/markTest
 /enjo-marketing/admin/api/platform/coupon/create
@@ -23,6 +23,7 @@ pc平台端
 /enjo-marketing/admin/api/customer/coupons
 /enjo-user/admin/api/user/codeLoginPlatform
 /enjo-user/admin/api/user/ruleMenu
+/enjo-user/admin/api/user/info
 ```
 未使用接口
 ```
@@ -233,7 +234,6 @@ pc平台端
 /enjo-user/admin/api/user/codeLogin/V2.2
 /enjo-user/admin/api/user/isNewUser/${phone}/V2.2
 /enjo-user/admin/api/user/init/password/V2.2
-/enjo-user/admin/api/user/info
 /enjo-user/admin/api/user/register
 /enjo-user/admin/api/user/register/V2.2
 /enjo-merchant/admin/api/merchant/apply/submitApply
@@ -242,4 +242,57 @@ pc平台端
 /enjo-merchant/admin/api/merchant/apply/confirm
 /enjo-user/admin/api/user/reset/password/V2.2
 /enjo-user/admin/api/user/forget/password/V2.2
+/enjo-business/admin/api/v1/materials - post
+/enjo-business/admin/api/v1/materials - get
+/enjo-business/admin/api/v1/materials/${id} - post
+/enjo-business/admin/api/v1/materials/${id} - delete
+/enjo-business/admin/api/v1/activity_templates/system_preset
+/enjo-business/admin/api/v1/activity_templates/${activityTemplateId}
+/enjo-business/admin/api/v1/activities
+/enjo-business/admin/api/v1/goods
+/enjo-business/admin/api/v1/goods/categories
+/enjo-business/admin/api/v1/activities
+/enjo-business/admin/api/v1/activities/categories
+/enjo-business/admin/api/v1/activities/statuses
+/enjo-business/admin/api/v1/activities/audit_statuses
+/enjo-business/admin/api/v1/activities/${activityId}/qrCode
+/enjo-business/admin/api/v1/activities/${activityId} - get
+/enjo-business/admin/api/v1/activities/${activityId} - post
+/enjo-business/admin/api/v1/activities/${activityId}/publish
+/enjo-business/admin/api/v1/activities/${activityId}
+/enjo-business/admin/api/v1/activities/${activityId}/share_posters/
+/enjo-business/admin/api/v1/activities/${activityId}/share_posters/${sharePosterId}
+/enjo-business/admin/api/v1/activities/${activityId}/share_posters/applied
+/enjo-business/admin/api/v1/activities/${activityId}/url
+/enjo-business/admin/api/v1/orders
+/enjo-business/admin/api/v1/orders/statuses
+/enjo-business/admin/api/v1/orders/${orderId}/refund
+/enjo-business/admin/api/v1/orders/${orderId}/check
+/enjo-business/admin/api/v1/shares
+/enjo-business/admin/api/v1/shares/${activityId}/${customerId}
+/enjo-business/admin/api/v1/shares/activity
+/enjo-business/admin/api/v1/activities/select
+/enjo-business/admin/api/v1/shares/${activityId}/${customerId}/top/${isTop}
+/enjo-business/admin/api/v1/shares/extra
+/enjo-business/admin/api/v1/groups/leader/select
+/enjo-business/admin/api/v1/goods
+/enjo-business/admin/api/v1/orders/statuses
+/enjo-business/admin/api/v1/orders/enroll
+/enjo-business/admin/api/v1/groups
+/enjo-business/admin/api/v1/orders/statistics?activityId=${activityId}
+/enjo-business/admin/api/v1/activities/${activityId}/end_manually
+/enjo-business/admin/api/v1/balance-change-records/change-type
+/enjo-business/admin/api/v1/balance-change-records
+/enjo-business/admin/api/v1/orders/balance-statistics
+/enjo-marketing/admin/marketing/activity/listPage
+/enjo-marketing/admin/marketing/activity/groupBuying/createOrUpdate
+/enjo-marketing/admin/marketing/activity/bargain/createOrUpdate
+/enjo-marketing/admin/marketing/activity/groupBuying/info
+/enjo-marketing/admin/marketing/activity/bargain/info
+/enjo-goods/admin/product/merchant/detail
+/enjo-marketing/admin/marketing/activity/groupBuying/info
+/enjo-marketing/admin/marketing/activity/bargain/info
+/enjo-marketing/admin/marketing/activity/toExamine
+/enjo-marketing/admin/marketing/activity/updateStatus
+/enjo-marketing/admin/marketing/activity/selectActivityAlreadySortList
 ```
