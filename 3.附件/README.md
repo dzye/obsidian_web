@@ -39,6 +39,9 @@ pc平台端
 /enjo-order/admin/platform/api/order/list
 /enjo-order/admin/platform/api/order/detail/${orderNumber}
 /enjo-marketing/admin/platform/api/coupon/list
+/enjo-marketing/admin/api/platform/coupon/getDetail
+/enjo-marketing/admin/api/platform/coupon/sendRecord
+/enjo-marketing/admin/api/platform/coupon/update
 ```
 未使用接口
 ```
@@ -361,4 +364,5 @@ pc平台端
 /enjo-marketing/admin/api/coupon/package/updateStatus
 /enjo-marketing/admin/api/coupon/package/delete
 /enjo-marketing/admin/api/coupon/package/listPage
+/enjo-goods/admin/product/merchant/create
 ```
