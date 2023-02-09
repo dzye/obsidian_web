@@ -29,10 +29,7 @@ pc平台端
 /enjo-user/admin/api/platform/area/list
 /enjo-user/admin/platform/api/cgroup/list
 /enjo-user/admin/platform/api/cgroup/info
-/enjo-merchant/admin/api/distributor/getDistributor/conditions
-/enjo-merchant/admin/api/distributor/setting/distributor/conditions
 /enjo-merchant/admin/api/merchant/info
-/enjo-merchant/admin/api/merchant/createOrUpdate
 /enjo-order/admin/api/merchant/order/enjoOrder/submit
 /enjo-order/admin/api/merchant/order/enjoOrder/update
 /enjo-order/admin/order/refund/record/listV2
@@ -532,4 +529,7 @@ enjo-infra/admin/api/wechatthired/revertcoderelease
 /enjo-marketing/admin/api/merchant/coupon/user/delete
 /enjo-marketing/admin/api/customer/coupons
 enjo-infra/admin/api/wechatthired/getpage
+/enjo-merchant/admin/api/distributor/getDistributor/conditions
+/enjo-merchant/admin/api/distributor/setting/distributor/conditions
+/enjo-merchant/admin/api/merchant/createOrUpdate
 ```
