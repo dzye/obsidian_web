@@ -95,6 +95,16 @@ pc平台端
 /enjo-customer/admin/api/customer/info
 enjo-infra/admin/api/wechatthired/getdrafts
 enjo-infra/admin/api/wechatthired/addtotemplate
+enjo-infra/admin/api/wechatthired/gettemplates
+enjo-infra/admin/api/wechatthired/delTemplate
+enjo-infra/admin/api/wechatthired/commit
+enjo-infra/admin/api/wechatthired/submitaudit
+enjo-infra/admin/api/wechatthired/release
+enjo-infra/admin/api/wechatthired/queryMerchantV2
+enjo-infra/admin/api/wechatthired/experienceQRCode
+enjo-infra/admin/api/wechatthired/cancelApproval
+enjo-infra/admin/api/wechatthired/getauditstatus
+enjo-infra/admin/api/wechatthired/revertcoderelease
 ```
 未使用接口
 ```
@@ -521,4 +531,5 @@ enjo-infra/admin/api/wechatthired/addtotemplate
 /enjo-customer/admin/api/customer/update/integral
 /enjo-marketing/admin/api/merchant/coupon/user/delete
 /enjo-marketing/admin/api/customer/coupons
+enjo-infra/admin/api/wechatthired/getpage
 ```
