@@ -81,6 +81,15 @@ pc平台端
 /enjo-user/admin/api/platform/areaAdmin/update
 /enjo-user/admin/api/platform/areaAdmin/list
 /enjo-user/admin/api/platform/areaAdmin/operate
+/enjo-user/admin/platform/api/menu/list
+/enjo-user/admin/platform/api/menu/create
+/enjo-user/admin/platform/api/menu/update
+/enjo-user/admin/platform/api/menu/delete
+/enjo-user/admin/platform/api/menu/enableOrDisable
+/enjo-user/admin/platform/api/merchantRoleTemplate/list
+/enjo-user/admin/platform/api/merchantRoleTemplate/add
+/enjo-user/admin/platform/api/merchantRoleTemplate/update
+/enjo-user/admin/platform/api/merchantRoleTemplate/info
 ```
 未使用接口
 ```
@@ -439,4 +448,25 @@ pc平台端
 /enjo-goods/admin/product/platform/down
 /enjo-goods/admin/product/platform/out
 /product/platform/update
+/enjo-marketing/admin/api/hotword/script/select
+/enjo-marketing/admin/api/hotword/script/update
+/api/price/watermark/selectByMerchantId
+/enjo-user/admin/platform/api/merchantRoleTemplate/delete
+/enjo-course/admin/course/member/listPageV2
+/enjo-course/admin/course/member/updateGraduate
+/enjo-course/admin/course/member/detail
+/enjo-course/admin/course/member/updateMember
+/enjo-course/admin/course/member/updateMemberFamily
+/enjo-course/admin/course/member/addMember
+/enjo-course/admin/course/member/getLogs
+/enjo-user/admin/api/sys/menu/deleted
+/enjo-user/admin/api/sys/role/deleted
+/enjo-user/admin/api/sys/role/createOrUpdate
+/enjo-user/admin/api/sys/role/info
+/enjo-user/admin/api/sys/role/listPage
+/enjo-user/admin/api/platform/user/getAuthQRCode/${platformUserId}/V2.2
+/enjo-marketing/admin/api/share/auth - get
+/enjo-marketing/admin/api/share/auth - delete
+/enjo-user/admin/api/platform/user/createOrUpdate
+/enjo-user/admin/api/platform/user/createOrUpdate/V2.2
 ```
