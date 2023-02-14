@@ -31,6 +31,7 @@ enjo-goods/api/product/collection/do/collect
 enjo-goods/api/product/collection/product/list
 enjo-goods/product/merchant/getInviteProductCode
 enjo-goods/product/platform/getList
+enjo-goods/product/platform/category/getList
 ```
 未使用接口
 ```
@@ -145,4 +146,11 @@ enjo-album/api/figure/bed/diary/checkUpdate
 enjo-album/api/figure/bed/diary/read
 enjo-album/api/figure/bed/diary/selectCurriculumList
 enjo-customer/api/family/queryfamily
+enjo-album/family/circle/getParentList
+enjo-album/family/circle/getIncompleteParentList
+enjo-album/family/circle/getChildList
+enjo-album/album/listPage
+enjo-album/album/info
+enjo-album/album/getAllYear
+enjo-album/album/infoByYear
 ```
