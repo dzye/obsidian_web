@@ -39,7 +39,6 @@ enjo-album/family/circle/familyCycleInfo/${userId}/${familyCycleId}
 enjo-album/family/circle/inviteFamilyMember
 enjo-album/family/cycleIdentity/list
 enjo-album/family/cycleIdentity/getMyIdentity
-enjo-album/family/circle/enableHide //身份隐藏
 enjo-marketing/marketing/activity/bargain/info
 enjo-infra/qrcode/scene/getParams
 enjo-marketing/marketing/activity/bargain/submitOrder
@@ -55,6 +54,27 @@ enjo-marketing/api/share/visitMerchant
 enjo-marketing/api/share/auth/existence
 enjo-merchant/api/merchant/findMerchantsByCurrentUser
 enjo-infra/api/file/getSts
+enjo-clue/clue/getInvitationCode
+enjo-clue/clue/acceptInvitation
+enjo-album/family/circle/getChildList2
+enjo-album/family/circle/bindMember
+enjo-course/course/member/list/${merchantId}
+enjo-marketing/api/columns/banners
+enjo-marketing/api/columns/posters
+enjo-user/api/areas/conn/${cityCode}
+enjo-business/api/v1/orders/${orderId}/vouchers
+enjo-merchant/api/merchant/selectMerchantById
+enjo-album/album/query
+enjo-album/album/query
+enjo-infra/acs/textSyncScan
+enjo-album/album/new/FamilyCycle/create
+enjo-album/album/photo/queryByAlbumId
+enjo-album/album/queryOwnAlbum
+enjo-album/album/photo/copy
+enjo-album/album/photo/move
+enjo-album/album/photo/remove
+enjo-album/album/photo/queryByType
+enjo-business/api/v1/distributions/total
 ```
 未使用接口
 ```
@@ -202,4 +222,9 @@ enjo-course/course/member/info
 enjo-course/course/matchingStudents
 enjo-album/family/circle/getNotUsedIdentityTitleBySex
 enjo-marketing/marketing/activity/listPage
+enjo-customer/api/user/join/merchant2/${merchantId}/${inviteUserId}
+enjo-album/album/create
+enjo-album/family/circle/enableHideOfFamilCycle
+enjo-album/family/circle/enableHide
+enjo-album/moment/findByPage
 ```
