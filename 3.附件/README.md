@@ -54,4 +54,15 @@ enjo-marketing/api/get_evalutae
 enjo-marketing/api/circle_type
 enjo-marketing/api/circle_list
 enjo-marketing/api/add_article
+enjo-marketing/api/circle_recommend
+enjo-marketing/api/circle_family_info
+enjo-marketing/api/get_circle_article
+enjo-marketing/api/get_comment
+enjo-marketing/api/circle_family_article
+enjo-marketing/api/circle_article_date
+enjo-marketing/api/my_picture
+enjo-marketing/api/circle_my_family
+enjo-customer/api/family/invite/code
+enjo-customer/api/family/join
+enjo-marketing/api/my_flow
 ```
