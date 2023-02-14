@@ -65,4 +65,12 @@ enjo-marketing/api/circle_my_family
 enjo-customer/api/family/invite/code
 enjo-customer/api/family/join
 enjo-marketing/api/my_flow
+enjo-marketing/api/my_like
+enjo-marketing/api/my_comment
+enjo-marketing/api/circle_article_list
+enjo-marketing/api/edit_profile
+enjo-marketing/api/upload_back_img
+enjo-marketing/api/behavior_fans
+njo-marketing/api/spot_like
+enjo-marketing/api/add_comment
 ```
