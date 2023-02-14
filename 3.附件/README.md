@@ -30,7 +30,7 @@ enjo-goods/api/product/collection/do/cancel
 enjo-goods/api/product/collection/do/collect
 enjo-goods/api/product/collection/product/list
 enjo-goods/product/merchant/getInviteProductCode
-enjo-marketing/api/get_money
+enjo-goods/product/platform/getList
 ```
 未使用接口
 ```
@@ -132,4 +132,17 @@ enjo-marketing/api/get_service_qr_code
 enjo-customer/api/user/queryinvite
 enjo-customer/api/user/invite/friend
 enjo-marketing/api/order_expire_change_status
+enjo-marketing/api/get_money
+enjo-marketing/api/activity_topic
+enjo-marketing/api/coupons_details
+enjo-marketing/api/product/groupactivity/selectCustomer
+enjo-marketing/api/homepage/homepagedatasqa
+enjo-marketing/api/mer/customized/query
+enjo-marketing/api/hotword/query
+enjo-marketing/api/mer/mkcanners/select
+enjo-customer/api/figure/bed/diary/listPage
+enjo-album/api/figure/bed/diary/checkUpdate
+enjo-album/api/figure/bed/diary/read
+enjo-album/api/figure/bed/diary/selectCurriculumList
+enjo-customer/api/family/queryfamily
 ```
