@@ -9,6 +9,9 @@ enjo-customer/api/user/info
 enjo-customer/api/user/supplement
 enjo-customer/api/user/supplement/not-remind-again
 enjo-customer/api/user/modify
+enjo-marketing/customer/coupon/getMyList/V2
+enjo-marketing/customer/coupon/getNewCouponList
+enjo-marketing/customer/coupon/getMyList
 ```
 未使用接口
 ```
