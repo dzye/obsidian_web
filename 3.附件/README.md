@@ -12,6 +12,9 @@ enjo-customer/api/user/modify
 enjo-marketing/customer/coupon/getMyList/V2
 enjo-marketing/customer/coupon/getNewCouponList
 enjo-marketing/customer/coupon/getMyList
+enjo-marketing/customer/getProductByCouid
+enjo-goods/product/merchant/getDetail
+enjo-goods/customer/sku/getList
 ```
 未使用接口
 ```
@@ -28,4 +31,11 @@ enjo-marketing/api/coupon/package/submitOrder
 enjo-marketing/api/coupon/package/listPage
 enjo-marketing/api/coupon/package/userCouponInfo
 enjo-marketing/api/coupon/package/info
+enjo-customer/api/family/all
+enjo-customer/api/my_family_add
+enjo-customer/api/distributor/getAccount?merchantId=${merchantId}
+enjo-customer/api/distributor/getInfo?merchantId=${merchantId}
+enjo-customer/api/distributor/application/distributor?merchantId=${merchantId}
+enjo-marketing/api/get_spell_group_list
+enjo-marketing/api/shop_user_address_list
 ```
