@@ -40,6 +40,21 @@ enjo-album/family/circle/inviteFamilyMember
 enjo-album/family/cycleIdentity/list
 enjo-album/family/cycleIdentity/getMyIdentity
 enjo-album/family/circle/enableHide //身份隐藏
+enjo-marketing/marketing/activity/bargain/info
+enjo-infra/qrcode/scene/getParams
+enjo-marketing/marketing/activity/bargain/submitOrder
+enjo-marketing/marketing/activity/bargain
+enjo-marketing/marketing/activity/groupBuying/submitOrder
+enjo-marketing/marketing/activity/participant/listPage
+enjo-marketing/api/share/auth
+enjo-marketing/api/share/merchant
+enjo-marketing/api/share/auth
+enjo-marketing/api/share/link
+enjo-marketing/api/share/visit
+enjo-marketing/api/share/visitMerchant
+enjo-marketing/api/share/auth/existence
+enjo-merchant/api/merchant/findMerchantsByCurrentUser
+enjo-infra/api/file/getSts
 ```
 未使用接口
 ```
@@ -186,4 +201,5 @@ enjo-course/course/member/attendance/leave
 enjo-course/course/member/info
 enjo-course/course/matchingStudents
 enjo-album/family/circle/getNotUsedIdentityTitleBySex
+enjo-marketing/marketing/activity/listPage
 ```
