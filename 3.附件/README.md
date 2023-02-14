@@ -5,6 +5,10 @@ c端小程序
 enjo-infra/api/wechatthired/accountBasicInfo
 enjo-customer/api/user/wx/login
 enjo-customer/api/user/wx/binding/phone
+enjo-customer/api/user/info
+enjo-customer/api/user/supplement
+enjo-customer/api/user/supplement/not-remind-again
+enjo-customer/api/user/modify
 ```
 未使用接口
 ```
@@ -15,5 +19,10 @@ enjo-merchant/api/customer/message/readMessage
 enjo-marketing/api/wechat_login
 enjo-merchant/api/mer/get/app/${appId}
 enjo-marketing/api/wechat_analysi
-return request.post(baseUrl + '', params)
+enjo-merchant/api/mer/connect
+enjo-marketing/api/wechat_register
+enjo-marketing/api/coupon/package/submitOrder
+enjo-marketing/api/coupon/package/listPage
+enjo-marketing/api/coupon/package/userCouponInfo
+enjo-marketing/api/coupon/package/info
 ```
