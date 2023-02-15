@@ -1,316 +1,420 @@
-c端小程序
-
-使用的接口
-```
-enjo-infra/api/wechatthired/accountBasicInfo
-enjo-customer/api/user/wx/login
-enjo-customer/api/user/wx/binding/phone
-enjo-customer/api/user/info
-enjo-customer/api/user/supplement
-enjo-customer/api/user/supplement/not-remind-again
-enjo-customer/api/user/modify
-enjo-marketing/customer/coupon/getMyList/V2
-enjo-marketing/customer/coupon/getNewCouponList
-enjo-marketing/customer/coupon/getMyList
-enjo-marketing/customer/getProductByCouid
-enjo-goods/product/merchant/getDetail
-enjo-goods/customer/sku/getList
-enjo-marketing/api/banners/queryBanners
-enjo-order/customer/order/submit
-enjo-marketing/customer/coupon/getToUseList
-enjo-marketing/customer/coupon/getMerchantCouponList
-enjo-marketing/customer/coupon/getToUseList
-enjo-marketing/customer/coupon/getDiscountPrice
-enjo-order/customer/order/getList
-enjo-order/customer/order/getDetail
-enjo-order/api/wechat/pay/do/createOrder
-enjo-order/customer/order/cancel
-enjo-marketing/api/user_confirm_the_goods
-enjo-goods/api/product/collection/do/cancel
-enjo-goods/api/product/collection/do/collect
-enjo-goods/api/product/collection/product/list
-enjo-goods/product/merchant/getInviteProductCode
-enjo-goods/product/platform/getList
-enjo-goods/product/platform/category/getList
-enjo-album/family/circle/list
-enjo-album/family/circle/exitFamilyCycle
-enjo-album/family/circle/isInfamilyCycle/${userId}/${familyCycleId}
-enjo-album/family/circle/familyCycleInfo/${userId}/${familyCycleId}
-enjo-album/family/circle/inviteFamilyMember
-enjo-album/family/cycleIdentity/list
-enjo-album/family/cycleIdentity/getMyIdentity
-enjo-marketing/marketing/activity/bargain/info
-enjo-infra/qrcode/scene/getParams
-enjo-marketing/marketing/activity/bargain/submitOrder
-enjo-marketing/marketing/activity/bargain
-enjo-marketing/marketing/activity/groupBuying/submitOrder
-enjo-marketing/marketing/activity/participant/listPage
-enjo-marketing/api/share/auth
-enjo-marketing/api/share/merchant
-enjo-marketing/api/share/auth
-enjo-marketing/api/share/link
-enjo-marketing/api/share/visit
-enjo-marketing/api/share/visitMerchant
-enjo-marketing/api/share/auth/existence
-enjo-merchant/api/merchant/findMerchantsByCurrentUser
-enjo-infra/api/file/getSts
-enjo-clue/clue/getInvitationCode
-enjo-clue/clue/acceptInvitation
-enjo-album/family/circle/getChildList2
-enjo-album/family/circle/bindMember
-enjo-course/course/member/list/${merchantId}
-enjo-marketing/api/columns/banners
-enjo-marketing/api/columns/posters
-enjo-user/api/areas/conn/${cityCode}
-enjo-business/api/v1/orders/${orderId}/vouchers
-enjo-merchant/api/merchant/selectMerchantById
-enjo-album/album/query
-enjo-album/album/query
-enjo-infra/acs/textSyncScan
-enjo-album/album/new/FamilyCycle/create
-enjo-album/album/photo/queryByAlbumId
-enjo-album/album/queryOwnAlbum
-enjo-album/album/photo/copy
-enjo-album/album/photo/move
-enjo-album/album/photo/remove
-enjo-album/album/photo/queryByType
-enjo-album/moment/findByPageWithMomentType/new
-enjo-business/api/v1/distributions/total
-enjo-business/api/v1/distributions
-enjo-album/moment/likeMoment
-enjo-album/moment/findMomentDetail/V2
-enjo-album/moment/deleteMoment
-enjo-album/moment/deleteComment
-enjo-album/moment/deleteCommentReply
-enjo-album/moment/momentAddComment
-enjo-album/moment/momentAddCommentReply
-enjo-album/moment/inviteFindMomentDetail
-enjo-album/album/photo/inviteQueryByPhotoId
-enjo-marketing/api/share/sharePhotoLink
-enjo-album/album/photo/queryByAlbumId
-enjo-infra/acs/imageSyncScan
-enjo-infra/pic/sharePicture
-enjo-infra/qrcode/create
-enjo-course/course/calendar/listV2
-enjo-marketing/api/share/merchantV2
-enjo-merchant/api/merchant/selectMerchantByLike
-enjo-marketing/api/share/visit
-enjo-album/moment/checkCreateButton
-enjo-merchant/api/merchant/selectDefaultMerchantId
-enjo-album/moment/shareMoment
-enjo-album/family/circle/isBindingStudentFlag
-enjo-merchant/api/propaganda/find/all/V2.2.2
-enjo-merchant/api/propaganda/merchant/find/introduce/V2.2.2
-enjo-marketing/marketing/activity/homePageListPage
-enjo-merchant/api/propaganda/teacher/teacherTypeDetailV2.2.2
-enjo-merchant/api/propaganda/course/courseTypeDetailV2.2.2
-enjo-merchant/api/propaganda/course/detail/${id}/V2.2.2
-enjo-merchant/api/propaganda/teacher/detail/${id}/V2.2.2
-enjo-marketing/marketing/activity/pageDetail
-enjo-goods/product/merchant/getPopularList
-enjo-goods/product/merchant/getList
-enjo-goods/product/merchant/category/getListByParentId
-enjo-infra/acs/getVideoPlayAuth
-enjo-infra/acs/getVideoPlayInfo
-enjo-infra/region/getListByParentId
-enjo-goods/product/platform/getLatestList
-enjo-album/album/photo/queryDefPhoto
-enjo-album/album/delete
-enjo-album/album/edit
-enjo-order/customer/order/contact/list
-enjo-order/customer/order/contact/add
-enjo-order/customer/order/contact/delete
-enjo-order/customer/order/contact/update
-enjo-goods/product/platform/getTagList
-enjo-course/course/enjoCourseInfo
-enjo-album/family/circle/getChildListByCourse
-enjo-album/family/circle/joinCourse
-enjo-album/moment/notify/qty
-enjo-album/moment/notify/list
-enjo-album/moment/notify/markAllRead
-enjo-album/moment/notify/markRead
-enjo-album/family/circle/createFamilyCycle
-enjo-album/family/circle/getMemberByUserId
-enjo-business/api/v1/activities/${activityId}
-enjo-business/api/v1/activities/${activityId}/share_poster/${qrCodeId}
-enjo-business/api/v1/activities/${activityId}/orders
-enjo-business/api/v1/activities/${activityId}/orders/${orderId}/is_paid
-enjo-business/api/v1/activities/${activityId}/groups/customer_goods
-enjo-business/api/v1/activities/${activityId}/groups/goods
-enjo-business/api/v1/activities/${activityId}/orders/paid_recently
-enjo-business/api/v1/activities/${activityId}/distributions/rank
-enjo-business/api/v1/activities/${activityId}/overview
-enjo-business/api/v1/activities/${activityId}/pv/share
-enjo-business/api/v1/activities/${activityId}/groups/share_customer_goods
-enjo-business/api/v1/activities/${activityId}/vouchers
-enjo-business/api/v1/activities/${activityId}/host_merchant_info
-enjo-business/api/v1/activities/${activityId}
-enjo-business/api/v1/activities/${activityId}/shares
-enjo-business/api/v1/activities/${activityId}/shares/${shareId}
-enjo-business/api/v1/activities/${activityId}/share_config
-enjo-customer/api/customer-events
-enjo-customer/api/customer-events/${eventId}/departure/${departureType}
-enjo-business/api/v1/orders
-enjo-business/api/v1/orders/${orderId}
-enjo-business/api/v1/orders/${orderId}/delivery
-enjo-user/api/areas/conn/${cityCode}
-enjo-album/moment/new/FamilyCycle/batchCreate
-enjo-customer/api/customer/geo/updateLastLocation
-```
-未使用接口
-```
-enjo-customer/api/log/save
-enjo-merchant/api/activity/calendar/list
-enjo-merchant/api/customer/message/getMessage
-enjo-merchant/api/customer/message/readMessage
-enjo-marketing/api/wechat_login
-enjo-merchant/api/mer/get/app/${appId}
-enjo-marketing/api/wechat_analysi
-enjo-merchant/api/mer/connect
-enjo-marketing/api/wechat_register
-enjo-marketing/api/coupon/package/submitOrder
-enjo-marketing/api/coupon/package/listPage
-enjo-marketing/api/coupon/package/userCouponInfo
-enjo-marketing/api/coupon/package/info
-enjo-customer/api/family/all
-enjo-customer/api/my_family_add
-enjo-customer/api/distributor/getAccount?merchantId=${merchantId}
-enjo-customer/api/distributor/getInfo?merchantId=${merchantId}
-enjo-customer/api/distributor/application/distributor?merchantId=${merchantId}
-enjo-marketing/api/get_spell_group_list
-enjo-marketing/api/shop_user_address_list
-enjo-marketing/api/shop_user_address_add
-enjo-marketing/api/shop_user_address_delete
-enjo-marketing/api/shop_user_address_info
-enjo-marketing/api/shop_user_address_update
-enjo-marketing/api/add_feedback
-enjo-marketing/api/get_city_list
-enjo-marketing/api/get_mix_monkey_active
-enjo-goods/customer/category/getList
-enjo-marketing/api/get_evalutae
-enjo-marketing/api/circle_type
-enjo-marketing/api/circle_list
-enjo-marketing/api/add_article
-enjo-marketing/api/circle_recommend
-enjo-marketing/api/circle_family_info
-enjo-marketing/api/get_circle_article
-enjo-marketing/api/get_comment
-enjo-marketing/api/circle_family_article
-enjo-marketing/api/circle_article_date
-enjo-marketing/api/my_picture
-enjo-marketing/api/circle_my_family
-enjo-customer/api/family/invite/code
-enjo-customer/api/family/join
-enjo-marketing/api/my_flow
-enjo-marketing/api/my_like
-enjo-marketing/api/my_comment
-enjo-marketing/api/circle_article_list
-enjo-marketing/api/edit_profile
-enjo-marketing/api/upload_back_img
-enjo-marketing/api/behavior_fans
-njo-marketing/api/spot_like
-enjo-marketing/api/add_comment
-enjo-marketing/api/get_product_cart_list
-enjo-marketing/api/update_cart_number
-enjo-marketing/api/empty_product_cart
-enjo-marketing/customer/coupon/receive
-enjo-marketing/api/get_product_spell_list
-enjo-marketing/api/add_product_cart
-enjo-marketing/api/get_member_code_list
-enjo-marketing/api/get_mix_monkey_activity
-enjo-marketing/api/get_spell_order_list
-enjo-customer/api/distributor/account/listPage
-enjo-customer/api/distributor/getInfo
-enjo-customer/api/distributor/withdrawalApplication/listPage
-enjo-customer/api/distributor/apply/withdrawal
-enjo-marketing/api/get_spell_order_info
-enjo-order/customer/order/getList
-enjo-marketing/api/other_activity
-enjo-marketing/api/upd_spell_count_down_status
-enjo-marketing/api/get_hot_word_search_list
-enjo-marketing/api/upd_seconds_kill_status
-enjo-marketing/customer/coupon/receive
-enjo-marketing/api/add_evalutae
-enjo-marketing/api/dimensional_info
-enjo-marketing/api/get_score
-enjo-marketing/api/dimensional_statistics
-enjo-marketing/api/dimensional_activity
-enjo-merchant/api/sixlatitudeeighteenenergy/getRadarChart
-enjo-merchant/api/sixlatitudeeighteenenergy/getLineChart
-enjo-merchant/api/sixlatitudeeighteenenergy/getActivityNumber
-enjo-merchant/api/sixlatitudeeighteenenergy/getUpgradeRecord
-enjo-merchant/api/sixlatitudeeighteenenergy/getEighteenEnergy
-enjo-customer/api/family/add
-enjo-customer/api/family/modify
-enjo-marketing/api/share_score
-enjo-marketing/api/user_give_coupons
-enjo-marketing/api/get_coupons_git_list
-enjo-marketing/api/get_coupons_details
-enjo-marketing/api/receive_coupons_vesige_share
-enjo-marketing/api/receive_coupons_git_vesige_share
-enjo-marketing/api/max_monkey_relation
-enjo-marketing/api/get_code_user_info
-enjo-marketing/api/circle_article_flow
-enjo-marketing/api/get_evaluate
-enjo-marketing/api/get_status
-enjo-marketing/api/get_service_qr_code
-enjo-customer/api/user/queryinvite
-enjo-customer/api/user/invite/friend
-enjo-marketing/api/order_expire_change_status
-enjo-marketing/api/get_money
-enjo-marketing/api/activity_topic
-enjo-marketing/api/coupons_details
-enjo-marketing/api/product/groupactivity/selectCustomer
-enjo-marketing/api/homepage/homepagedatasqa
-enjo-marketing/api/mer/customized/query
-enjo-marketing/api/hotword/query
-enjo-marketing/api/mer/mkcanners/select
-enjo-customer/api/figure/bed/diary/listPage
-enjo-album/api/figure/bed/diary/checkUpdate
-enjo-album/api/figure/bed/diary/read
-enjo-album/api/figure/bed/diary/selectCurriculumList
-enjo-customer/api/family/queryfamily
-enjo-album/family/circle/getParentList
-enjo-album/family/circle/getIncompleteParentList
-enjo-album/family/circle/getChildList
-enjo-album/album/listPage
-enjo-album/album/info
-enjo-album/album/getAllYear
-enjo-album/album/infoByYear
-enjo-album/album/infoByMonth
-enjo-infra/system/dictData/list
-enjo-album/family/circle/getNotUsedIdentityTitle
-enjo-album/family/circle/addIdentity
-enjo-album/system/dictData/list
-enjo-album/album/photo/comment/listPage
-enjo-album/album/photo/comment/submit
-enjo-album/album/photo/comment/delete
-enjo-album/album/homePage
-enjo-album/album/photo/saveEvent
-enjo-album/album/unknownAge
-enjo-album/album/infoByAge
-enjo-album/album/photo/assign
-enjo-album/family/circle/updateIdentity
-enjo-album/family/circle/getInvitationCode
-enjo-album/family/cycleIdentity/info
-enjo-album/family/circle/join
-enjo-album/family/circle/removeIdentityBind
-enjo-album/family/circle/deleteIdentity
-enjo-course/course/member/matchingByIdentityId
-enjo-course/course/list
-enjo-course/course/member/attendance/leave
-enjo-course/course/member/info
-enjo-course/course/matchingStudents
-enjo-album/family/circle/getNotUsedIdentityTitleBySex
-enjo-marketing/marketing/activity/listPage
-enjo-customer/api/user/join/merchant2/${merchantId}/${inviteUserId}
-enjo-album/album/create
-enjo-album/family/circle/enableHideOfFamilCycle
-enjo-album/family/circle/enableHide
-enjo-album/moment/findByPage
-enjo-album/moment/findByPageWithMomentType/V2
-enjo-album/moment/new/FamilyCycle/create
-enjo-album/moment/create
-enjo-goods/product/platform/getPopularList
-enjo-business/api/v1/activities/${activityId}/orders/${orderId}/voucher
-```
+process {
+  version: 'v16.15.1',
+  versions: {
+    node: '16.15.1',
+    v8: '9.4.146.24-node.21',
+    uv: '1.43.0',
+    zlib: '1.2.11',
+    brotli: '1.0.9',
+    ares: '1.18.1',
+    modules: '93',
+    nghttp2: '1.47.0',
+    napi: '8',
+    llhttp: '6.0.4',
+    openssl: '1.1.1o+quic',
+    cldr: '40.0',
+    icu: '70.1',
+    tz: '2021a3',
+    unicode: '14.0',
+    ngtcp2: '0.1.0-DEV',
+    nghttp3: '0.1.0-DEV'
+  },
+  arch: 'x64',
+  platform: 'darwin',
+  release: {
+    name: 'node',
+    lts: 'Gallium',
+    sourceUrl: 'https://nodejs.org/download/release/v16.15.1/node-v16.15.1.tar.gz',
+    headersUrl: 'https://nodejs.org/download/release/v16.15.1/node-v16.15.1-headers.tar.gz'
+  },
+  _rawDebug: [Function: _rawDebug],
+  moduleLoadList: [
+    'Internal Binding native_module',
+    'Internal Binding errors',
+    'NativeModule internal/errors',
+    'Internal Binding config',
+    'Internal Binding timers',
+    'Internal Binding async_wrap',
+    'Internal Binding constants',
+    'Internal Binding util',
+    'Internal Binding types',
+    'NativeModule internal/util',
+    'NativeModule internal/util/types',
+    'NativeModule internal/validators',
+    'NativeModule internal/promise_hooks',
+    'Internal Binding task_queue',
+    'Internal Binding symbols',
+    'NativeModule internal/async_hooks',
+    'NativeModule internal/linkedlist',
+    'NativeModule internal/priority_queue',
+    'NativeModule internal/assert',
+    'Internal Binding icu',
+    'NativeModule internal/util/inspect',
+    'NativeModule internal/util/debuglog',
+    'NativeModule internal/timers',
+    'NativeModule events',
+    'Internal Binding buffer',
+    'Internal Binding string_decoder',
+    'NativeModule internal/buffer',
+    'Internal Binding blob',
+    'NativeModule internal/encoding',
+    'Internal Binding messaging',
+    'NativeModule internal/worker/js_transferable',
+    'NativeModule internal/constants',
+    'NativeModule internal/blob',
+    'NativeModule buffer',
+    'NativeModule internal/modules/esm/handle_process_exit',
+    'Internal Binding process_methods',
+    'NativeModule internal/process/per_thread',
+    'Internal Binding credentials',
+    'NativeModule internal/process/promises',
+    'NativeModule internal/fixed_queue',
+    'NativeModule async_hooks',
+    'NativeModule internal/process/task_queues',
+    'Internal Binding trace_events',
+    'NativeModule internal/console/constructor',
+    'NativeModule internal/console/global',
+    'NativeModule internal/util/inspector',
+    'Internal Binding inspector',
+    'NativeModule internal/querystring',
+    'NativeModule path',
+    'NativeModule querystring',
+    'Internal Binding url',
+    'NativeModule internal/url',
+    'NativeModule util',
+    'Internal Binding performance',
+    'NativeModule internal/perf/utils',
+    'NativeModule internal/event_target',
+    'NativeModule timers',
+    'NativeModule internal/abort_controller',
+    'Internal Binding worker',
+    'NativeModule internal/streams/end-of-stream',
+    'NativeModule internal/streams/operators',
+    'NativeModule internal/streams/destroy',
+    'NativeModule internal/streams/legacy',
+    'NativeModule internal/streams/add-abort-signal',
+    'NativeModule internal/streams/buffer_list',
+    'NativeModule internal/streams/state',
+    'NativeModule string_decoder',
+    'NativeModule internal/streams/from',
+    'NativeModule internal/streams/readable',
+    'NativeModule internal/streams/writable',
+    'NativeModule internal/streams/duplex',
+    'NativeModule internal/streams/utils',
+    'NativeModule internal/streams/pipeline',
+    'NativeModule internal/streams/compose',
+    'NativeModule stream/promises',
+    'NativeModule internal/streams/transform',
+    'NativeModule internal/streams/passthrough',
+    'NativeModule stream',
+    'NativeModule internal/worker/io',
+    'NativeModule internal/perf/performance_entry',
+    'NativeModule internal/perf/observe',
+    'NativeModule internal/perf/nodetiming',
+    'NativeModule internal/perf/usertiming',
+    'NativeModule internal/perf/event_loop_utilization',
+    'NativeModule internal/histogram',
+    'NativeModule internal/perf/timerify',
+    'NativeModule internal/perf/performance',
+    'NativeModule internal/perf/event_loop_delay',
+    'NativeModule perf_hooks',
+    'NativeModule internal/process/execution',
+    'NativeModule internal/process/warning',
+    'Internal Binding fs',
+    'NativeModule internal/fs/utils',
+    'Internal Binding fs_dir',
+    'NativeModule internal/fs/dir',
+    'Internal Binding fs_event_wrap',
+    'Internal Binding uv',
+    'NativeModule internal/fs/watchers',
+    'NativeModule internal/fs/read_file_context',
+    'NativeModule fs',
+    ... 119 more items
+  ],
+  binding: [Function: binding],
+  _linkedBinding: [Function: _linkedBinding],
+  _events: [Object: null prototype] {
+    newListener: [Function: startListeningIfSignal],
+    removeListener: [Function: stopListeningIfSignal],
+    warning: [Function: onWarning],
+    SIGWINCH: [ [Function (anonymous)], [Function (anonymous)] ]
+  },
+  _eventsCount: 4,
+  _maxListeners: undefined,
+  domain: null,
+  _exiting: false,
+  config: [Getter/Setter],
+  dlopen: [Function: dlopen],
+  uptime: [Function: uptime],
+  _getActiveRequests: [Function: _getActiveRequests],
+  _getActiveHandles: [Function: _getActiveHandles],
+  getActiveResourcesInfo: [Function (anonymous)],
+  reallyExit: [Function: reallyExit],
+  _kill: [Function: _kill],
+  cpuUsage: [Function: cpuUsage],
+  resourceUsage: [Function: resourceUsage],
+  memoryUsage: [Function: memoryUsage] { rss: [Function: rss] },
+  kill: [Function: kill],
+  exit: [Function: exit],
+  hrtime: [Function: hrtime] { bigint: [Function: hrtimeBigInt] },
+  openStdin: [Function (anonymous)],
+  getuid: [Function: getuid],
+  geteuid: [Function: geteuid],
+  getgid: [Function: getgid],
+  getegid: [Function: getegid],
+  getgroups: [Function: getgroups],
+  allowedNodeEnvironmentFlags: [Getter/Setter],
+  assert: [Function: deprecated],
+  features: {
+    inspector: true,
+    debug: false,
+    uv: true,
+    ipv6: true,
+    tls_alpn: true,
+    tls_sni: true,
+    tls_ocsp: true,
+    tls: true,
+    cached_builtins: [Getter]
+  },
+  _fatalException: [Function (anonymous)],
+  setUncaughtExceptionCaptureCallback: [Function: setUncaughtExceptionCaptureCallback],
+  hasUncaughtExceptionCaptureCallback: [Function: hasUncaughtExceptionCaptureCallback],
+  emitWarning: [Function: emitWarning],
+  nextTick: [Function: nextTick],
+  _tickCallback: [Function: runNextTicks],
+  _debugProcess: [Function: _debugProcess],
+  _debugEnd: [Function: _debugEnd],
+  _startProfilerIdleNotifier: [Function (anonymous)],
+  _stopProfilerIdleNotifier: [Function (anonymous)],
+  stdout: [Getter],
+  stdin: [Getter],
+  stderr: [Getter],
+  abort: [Function: abort],
+  umask: [Function: wrappedUmask],
+  chdir: [Function (anonymous)],
+  cwd: [Function (anonymous)],
+  initgroups: [Function: initgroups],
+  setgroups: [Function: setgroups],
+  setegid: [Function (anonymous)],
+  seteuid: [Function (anonymous)],
+  setgid: [Function (anonymous)],
+  setuid: [Function (anonymous)],
+  env: {
+    NVM_INC: '/Users/dazhuangye/.nvm/versions/node/v16.15.1/include/node',
+    PYCHARM_VM_OPTIONS: '/Users/dazhuangye/Downloads/jetbra/vmoptions/pycharm.vmoptions',
+    WEBIDE_VM_OPTIONS: '/Users/dazhuangye/Downloads/jetbra/vmoptions/webide.vmoptions',
+    TERM_PROGRAM: 'vscode',
+    NODE: '/Users/dazhuangye/.nvm/versions/node/v16.15.1/bin/node',
+    INIT_CWD: '/Users/dazhuangye/Work/vue-project/enjo-platform-admin',
+    NVM_CD_FLAGS: '-q',
+    npm_package_dependencies_axios: '^0.25.0',
+    npm_package_scripts_build_mk: 'vue-cli-service build --mode mk',
+    npm_package_scripts_prod: 'vue-cli-service serve --mode prod',
+    npm_config_version_git_tag: 'true',
+    TERM: 'xterm-256color',
+    JETBRAINSCLIENT_VM_OPTIONS: '/Users/dazhuangye/Downloads/jetbra/vmoptions/jetbrainsclient.vmoptions',
+    SHELL: '/bin/zsh',
+    npm_package_dependencies_less: '3.0.4',
+    npm_package_dependencies_eslint: '^8.33.0',
+    HOMEBREW_BOTTLE_DOMAIN: 'https://mirrors.aliyun.com/homebrew/homebrew-bottles',
+    TMPDIR: '/var/folders/p_/05q10yxs6_j66hr_dp20kqkc0000gn/T/',
+    npm_package_scripts_lint: 'eslint .',
+    npm_config_init_license: 'MIT',
+    TERM_PROGRAM_VERSION: '1.75.1',
+    npm_package_dependencies_terser_webpack_plugin: '4.2.3',
+    npm_package_scripts_dev: 'vue-cli-service serve --mode dev --host localhost ',
+    ZDOTDIR: '/Users/dazhuangye',
+    ORIGINAL_XDG_CURRENT_DESKTOP: 'undefined',
+    MallocNanoZone: '0',
+    npm_package_private: 'true',
+    npm_config_registry: 'https://registry.yarnpkg.com',
+    PNPM_HOME: '/Users/dazhuangye/Library/pnpm',
+    npm_package_readmeFilename: 'README.md',
+    npm_package_dependencies_dayjs: '^1.11.3',
+    NVM_DIR: '/Users/dazhuangye/.nvm',
+    JRE_HOME: '/Library/Java/JavaVirtualMachines/jdk-11.0.16.1.jdk/Contents/Home/jre',
+    USER: 'dazhuangye',
+    npm_package_description: '## Project setup ``` yarn install ```',
+    npm_package_scripts_build_test: 'vue-cli-service build --mode test',
+    npm_package_scripts_build_dev: 'vue-cli-service build --mode dev',
+    COMMAND_MODE: 'unix2003',
+    npm_package_dependencies_vuedraggable: '^4.1.0',
+    npm_package_dependencies__antfu_eslint_config: '^0.35.2',
+    PHPSTORM_VM_OPTIONS: '/Users/dazhuangye/Downloads/jetbra/vmoptions/phpstorm.vmoptions',
+    SSH_AUTH_SOCK: '/private/tmp/com.apple.launchd.Uu8N994wMI/Listeners',
+    npm_package_devDependencies__vue_cli_service: '~4.5.0',
+    __CF_USER_TEXT_ENCODING: '0x1F5:0x19:0x34',
+    GOLAND_VM_OPTIONS: '/Users/dazhuangye/Downloads/jetbra/vmoptions/goland.vmoptions',
+    npm_execpath: '/Users/dazhuangye/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/bin/yarn.js',
+    APPCODE_VM_OPTIONS: '/Users/dazhuangye/Downloads/jetbra/vmoptions/appcode.vmoptions',
+    CLASSPAHT: '.:/Library/Java/JavaVirtualMachines/jdk-11.0.16.1.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk-11.0.16.1.jdk/Contents/Home/lib/tools.jar',
+    DEVECOSTUDIO_VM_OPTIONS: '/Users/dazhuangye/Downloads/jetbra/vmoptions/devecostudio.vmoptions',
+    PATH: '/var/folders/p_/05q10yxs6_j66hr_dp20kqkc0000gn/T/yarn--1676440714346-0.7333503748381907:/Users/dazhuangye/Work/vue-project/enjo-platform-admin/node_modules/.bin:/Users/dazhuangye/.config/yarn/link/node_modules/.bin:/Users/dazhuangye/.nvm/versions/node/v16.15.1/libexec/lib/node_modules/npm/bin/node-gyp-bin:/Users/dazhuangye/.nvm/versions/node/v16.15.1/lib/node_modules/npm/bin/node-gyp-bin:/Users/dazhuangye/.nvm/versions/node/v16.15.1/bin/node_modules/npm/bin/node-gyp-bin:/Users/dazhuangye/.nvm/versions/node/v16.15.1/bin:/Library/Java/JavaVirtualMachines/jdk-11.0.16.1.jdk/Contents/Home/bin:/Library/Java/JavaVirtualMachines/jdk-11.0.16.1.jdk/Contents/Home/bin:/Users/dazhuangye/Library/pnpm:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/Users/dazhuangye/.nvm/versions/node/v16.15.1/bin:/Library/Java/JavaVirtualMachines/jdk-11.0.16.1.jdk/Contents/Home/bin:/Users/dazhuangye/Library/pnpm::',
+    npm_config_argv: '{"remain":[],"cooked":["run","dev"],"original":["run","dev"]}',
+    npm_package_scripts_lint_fix: 'eslint . --fix',
+    _: '/Users/dazhuangye/Work/vue-project/enjo-platform-admin/node_modules/.bin/vue-cli-service',
+    LaunchInstanceID: '7A7B31AD-B6B5-4EA8-9D1F-0580E29ABB19',
+    npm_package_dependencies_vue: '^3.0.0',
+    USER_ZDOTDIR: '/Users/dazhuangye',
+    __CFBundleIdentifier: 'com.microsoft.VSCode',
+    npm_package_dependencies_ant_design_vue: '^3.0.0-alpha.14',
+    PWD: '/Users/dazhuangye/Work/vue-project/enjo-platform-admin',
+    JAVA_HOME: '/Library/Java/JavaVirtualMachines/jdk-11.0.16.1.jdk/Contents/Home',
+    npm_package_dependencies_core_js: '^3.6.5',
+    npm_lifecycle_event: 'dev',
+    LANG: 'zh_CN.UTF-8',
+    IDEA_VM_OPTIONS: '/Users/dazhuangye/Downloads/jetbra/vmoptions/idea.vmoptions',
+    CLION_VM_OPTIONS: '/Users/dazhuangye/Downloads/jetbra/vmoptions/clion.vmoptions',
+    npm_package_name: 'monkey-admin',
+    NODE_PATH: '/Users/dazhuangye/Library/pnpm/global/5/.pnpm/node_modules',
+    npm_package_scripts_build: 'vue-cli-service build --mode prod',
+    npm_config_version_commit_hooks: 'true',
+    VSCODE_GIT_ASKPASS_EXTRA_ARGS: '--ms-enable-electron-run-as-node',
+    XPC_FLAGS: '0x0',
+    npm_package_scripts_lint_eslint: 'eslint --cache --max-warnings 0  "{src,mock}/**/*.{vue,js,ts,tsx}" --fix',
+    WEBSTORM_VM_OPTIONS: '/Users/dazhuangye/Downloads/jetbra/vmoptions/webstorm.vmoptions',
+    npm_config_bin_links: 'true',
+    DATASPELL_VM_OPTIONS: '/Users/dazhuangye/Downloads/jetbra/vmoptions/dataspell.vmoptions',
+    XPC_SERVICE_NAME: '0',
+    npm_package_version: '0.1.0',
+    VSCODE_INJECTION: '1',
+    npm_package_dependencies_less_loader: '^6.0.0',
+    npm_package_scripts_stage: 'vue-cli-service build --mode stage',
+    SHLVL: '2',
+    STUDIO_VM_OPTIONS: '/Users/dazhuangye/Downloads/jetbra/vmoptions/studio.vmoptions',
+    HOME: '/Users/dazhuangye',
+    npm_package_devDependencies__vue_cli_plugin_babel: '~4.5.0',
+    VSCODE_GIT_ASKPASS_MAIN: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js',
+    npm_package_devDependencies_eslint_plugin_vue: '^9.9.0',
+    npm_package_scripts_test: 'vue-cli-service serve --mode test',
+    npm_package_scripts_serve: 'vue-cli-service serve',
+    npm_config_save_prefix: '^',
+    npm_config_strict_ssl: 'true',
+    npm_package_devDependencies_husky: '^8.0.3',
+    npm_package_scripts_build_pre: 'vue-cli-service build --mode pre',
+    npm_package_scripts_uat: 'vue-cli-service serve --mode uat',
+    npm_config_version_git_message: 'v%s',
+    npm_package_browserslist_2: 'not dead',
+    npm_package_dependencies_echarts: '^5.4.1',
+    npm_package_scripts_build_uat: 'vue-cli-service build --mode uat',
+    npm_package_scripts_pre: 'vue-cli-service serve --mode pre',
+    npm_package_browserslist_1: 'last 2 versions',
+    LOGNAME: 'dazhuangye',
+    YARN_WRAP_OUTPUT: 'false',
+    npm_package_browserslist_0: '> 1%',
+    npm_lifecycle_script: 'vue-cli-service serve --mode dev --host localhost ',
+    VSCODE_GIT_IPC_HANDLE: '/var/folders/p_/05q10yxs6_j66hr_dp20kqkc0000gn/T/vscode-git-30f92b0155.sock',
+    GATEWAY_VM_OPTIONS: '/Users/dazhuangye/Downloads/jetbra/vmoptions/gateway.vmoptions',
+    npm_package_dependencies_vuex: '4.0.0',
+    npm_package_dependencies_vue_cropper: '^1.0.5',
+    NVM_BIN: '/Users/dazhuangye/.nvm/versions/node/v16.15.1/bin',
+    DATAGRIP_VM_OPTIONS: '/Users/dazhuangye/Downloads/jetbra/vmoptions/datagrip.vmoptions',
+    npm_package_devDependencies__vue_compiler_sfc: '^3.0.0',
+    npm_package_dependencies__tinymce_tinymce_vue: '^5.0.0',
+    npm_config_version_git_sign: '',
+    npm_config_ignore_scripts: '',
+    npm_config_user_agent: 'yarn/1.22.19 npm/? node/v16.15.1 darwin x64',
+    VSCODE_GIT_ASKPASS_NODE: '/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)',
+    GIT_ASKPASS: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh',
+    npm_package_dependencies_babel_plugin_import: '^1.13.6',
+    npm_package_dependencies__ant_design_icons_vue: '^6.1.0',
+    RIDER_VM_OPTIONS: '/Users/dazhuangye/Downloads/jetbra/vmoptions/rider.vmoptions',
+    JETBRAINS_CLIENT_VM_OPTIONS: '/Users/dazhuangye/Downloads/jetbra/vmoptions/jetbrains_client.vmoptions',
+    npm_package_scripts_prepare: 'husky install',
+    RUBYMINE_VM_OPTIONS: '/Users/dazhuangye/Downloads/jetbra/vmoptions/rubymine.vmoptions',
+    npm_config_init_version: '1.0.0',
+    npm_config_ignore_optional: '',
+    SECURITYSESSIONID: '186a5',
+    npm_package_dependencies_vue_router: '^4.0.12',
+    npm_package_dependencies_webpack_bundle_analyzer: '^4.7.0',
+    COLORTERM: 'truecolor',
+    npm_node_execpath: '/Users/dazhuangye/.nvm/versions/node/v16.15.1/bin/node',
+    npm_config_version_tag_prefix: 'v',
+    NODE_ENV: 'development',
+    VUE_APP_URL: 'https://api-dev.enjoyu.com',
+    BABEL_ENV: 'development'
+  },
+  title: '/Users/dazhuangye/.nvm/versions/node/v16.15.1/bin/node',
+  argv: [
+    '/Users/dazhuangye/.nvm/versions/node/v16.15.1/bin/node',
+    '/Users/dazhuangye/Work/vue-project/enjo-platform-admin/node_modules/.bin/vue-cli-service',
+    'serve',
+    '--mode',
+    'dev',
+    '--host',
+    'localhost'
+  ],
+  execArgv: [],
+  pid: 16077,
+  ppid: 16076,
+  execPath: '/Users/dazhuangye/.nvm/versions/node/v16.15.1/bin/node',
+  debugPort: 9229,
+  argv0: '/Users/dazhuangye/.nvm/versions/node/v16.15.1/bin/node',
+  _preload_modules: [],
+  report: [Getter],
+  setSourceMapsEnabled: [Function: setSourceMapsEnabled],
+  mainModule: Module {
+    id: '.',
+    path: '/Users/dazhuangye/Work/vue-project/enjo-platform-admin/node_modules/@vue/cli-service/bin',
+    exports: {},
+    filename: '/Users/dazhuangye/Work/vue-project/enjo-platform-admin/node_modules/@vue/cli-service/bin/vue-cli-service.js',
+    loaded: false,
+    children: [ [Module], [Module], [Module], [Module] ],
+    paths: [
+      '/Users/dazhuangye/Work/vue-project/enjo-platform-admin/node_modules/@vue/cli-service/bin/node_modules',
+      '/Users/dazhuangye/Work/vue-project/enjo-platform-admin/node_modules/@vue/cli-service/node_modules',
+      '/Users/dazhuangye/Work/vue-project/enjo-platform-admin/node_modules/@vue/node_modules',
+      '/Users/dazhuangye/Work/vue-project/enjo-platform-admin/node_modules',
+      '/Users/dazhuangye/Work/vue-project/node_modules',
+      '/Users/dazhuangye/Work/node_modules',
+      '/Users/dazhuangye/node_modules',
+      '/Users/node_modules',
+      '/node_modules'
+    ]
+  },
+  __signal_exit_emitter__: EventEmitter {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: Infinity,
+    count: 0,
+    emitted: {},
+    infinite: true,
+    [Symbol(kCapture)]: false
+  },
+  VUE_CLI_SERVICE: Service {
+    initialized: true,
+    context: '/Users/dazhuangye/Work/vue-project/enjo-platform-admin',
+    inlineOptions: undefined,
+    webpackChainFns: [],
+    webpackRawConfigFns: [],
+    devServerConfigFns: [],
+    commands: {},
+    pkgContext: '/Users/dazhuangye/Work/vue-project/enjo-platform-admin',
+    pkg: {
+      name: 'monkey-admin',
+      version: '0.1.0',
+      private: true,
+      scripts: [Object],
+      dependencies: [Object],
+      devDependencies: [Object],
+      browserslist: [Array],
+      readme: 'ERROR: No README data found!',
+      _id: 'monkey-admin@0.1.0'
+    },
+    plugins: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object]
+    ],
+    pluginsToSkip: Set(0) {},
+    modes: {
+      serve: 'development',
+      build: 'production',
+      inspect: 'development'
+    },
+    mode: 'dev'
+  },
+  [Symbol(kCapture)]: false
+}
