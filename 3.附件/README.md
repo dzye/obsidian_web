@@ -1,715 +1,1229 @@
-export const addRouters = [{
+```
+<template>
 
-path: '/account',
+<view class="main">
 
-component: Layout,
+<view class="textarea-box">
 
-meta: {
+<u-input
 
-title: '账号管理',
+height="300"
 
-icon: 'account',
+v-model="content"
 
-},
+type="textarea"
 
-redirect: {
+placeholder="说说照片背后的故事吧～比如孩子第一次独立上学/骑车/最美的全家郊游..."
 
-name: 'accountList',
+maxlength="300"
 
-},
+:clearable="false"
 
-children: [{
+/>
 
-path: '/account/index',
+<view class="textarea-num">{{ content.length }}/300</view>
 
-name: 'accountList',
+</view>
 
-component: () => import(
+<view class="select-album" style="border-bottom: none">
 
-/*webpackChunkName:"account"*/
+<view class="select-item-start"><view>类型</view></view>
 
-/* webpackPrefetch: true */
+<view class="select-item-end">
 
-'@/views/account/index'),
+<u-radio-group v-model="isImage" @change="typeChange">
 
-meta: {
+<u-radio
 
-title: '平台账号管理',
+icon-size="28"
 
-},
+label-size="28"
 
-},
+active-color="#6c86fa"
 
-{
+:name="1"
 
-path: '/account/role',
+>图片</u-radio
 
-name: 'roleList',
+>
 
-component: () => import(
+<u-radio
 
-/*webpackChunkName:"account"*/
+icon-size="28"
 
-/* webpackPrefetch: true */
+label-size="28"
 
-'@/views/role/index'),
+active-color="#6c86fa"
 
-meta: {
+:name="0"
 
-title: '平台角色管理',
+>视频</u-radio
 
-},
+>
 
-},
+</u-radio-group>
 
-],
+</view>
 
-},
+</view>
 
-{
+<view class="">
 
-path: '/merchantGroup',
+<jade-image-upload
 
-component: Layout,
+:list="media"
 
-meta: {
+:control="control"
 
-title: '集团管理',
+:columnType="columnType"
 
-},
+:mediaType="isImage ? ['image'] : ['video']"
 
-redirect: {
+:maxCount="isImage ? 20 : 1"
 
-name: 'merchantGroupList',
+:compressSize="compressSize"
 
-},
+:imageSize="imageSize"
 
-children: [{
+@chooseFile="chooseFile"
 
-path: '/merchantGroup/index',
+@imgDelete="imgDelete"
 
-name: 'merchantGroupList',
+></jade-image-upload>
 
-component: () => import(
+</view>
 
-/*webpackChunkName:"merchantGroup"*/
+<view class="tip">{{
 
-/* webpackPrefetch: true */
+isImage ? "*一次最多20张；照片格式：jpg、jpeg、png" : "*一次最多一段视频"
 
-'@/views/merchantGroup/list'),
+}}</view>
 
-meta: {
+<view class="select-album" @click="selectCycle">
 
-title: '集团列表',
+<view class="select-item-start">
 
-},
+<view class="icon iconfont icon-shangchuan"></view>
 
-}],
+<view>发布到家庭圈</view>
 
-},
+</view>
+
+<view class="select-item-end">
+
+<view>
+
+<view v-if="selected.length">
+
+<image
+
+v-for="item in selected"
+
+:key="item.childMemberId"
+
+:src="item.childAvatar"
+
+class="min-avatar"
+
+/>
+
+</view>
+
+<view v-else>请选择</view>
+
+</view>
+
+<view><image src="../../static/arrow.png"></image></view>
+
+</view>
+
+</view>
+
+<view class="select-album" @click="selectAlbum" v-if="albumShow">
+
+<view class="select-item-start">
+
+<view class="icon iconfont icon-shangchuan"></view>
+
+<view>上传到</view>
+
+</view>
+
+<view class="select-item-end">
+
+<view>{{ albumTitle }}</view>
+
+<view><image src="../../static/arrow.png"></image></view>
+
+</view>
+
+</view>
+
+<u-popup
+
+v-model="showSelectCycle"
+
+mode="bottom"
+
+border-radius="32"
+
+height="600"
+
+>
+
+<view class="cycle-header">
+
+<view class="cycle-cancel" @click="showSelectCycle = false">取消</view>
+
+<view class="cycle-title">选择孩子</view>
+
+<view class="cycle-query" @click="querySelect">确定</view>
+
+</view>
+
+<view class="select-all"
+
+><u-checkbox
+
+@change="allcheckedChange"
+
+v-model="allchecked"
+
+:name="all"
+
+shape="circle"
+
+>全部
+
+</u-checkbox>
+
+</view>
+
+<view class="content">
+
+<scroll-view scroll-y style="height: 300rpx">
+
+<u-checkbox-group @change="checkboxGroupChange" shape="circle">
+
+<u-checkbox
+
+v-model="item.checked"
+
+v-for="item in childrenData"
+
+:key="item.childMemberId"
+
+:name="item.childMemberId"
+
+>
+
+<view class="radio-label">
+
+<view>
+
+<image :src="item.childAvatar" />
+
+</view>
+
+<view class="name">{{ item.childName }}</view>
+
+</view>
+
+</u-checkbox>
+
+</u-checkbox-group>
+
+</scroll-view>
+
+</view>
+
+</u-popup>
+
+<view class="bottom-box">
+
+<view class="btn" @click="submit">确认发布</view>
+
+</view>
+
+</view>
+
+</template>
 
   
 
-// 商户管理
+<script>
 
-{
+import { uploadFile } from "@/utils/upload.js";
 
-path: '/merchant',
+import { uploadVideo } from "@/utils/uploadVideo.js";
 
-component: Layout,
+import { mapState } from "vuex";
 
-meta: {
+export default {
 
-title: '商户管理',
+data() {
 
-},
+return {
 
-redirect: {
+showSelectCycle: false,
 
-name: 'merchantList',
+isImage: 1,
 
-},
+content: "",
 
-children: [
+fileList: [],
 
-{
+albumTitle: "请选择",
 
-path: '/merchant/index',
+albumId: "",
 
-name: 'merchantList',
+control: true,
 
-component: () => import(
+columnType: "other",
 
-/*webpackChunkName:"merchant"*/
+maxCount: 20,
 
-/* webpackPrefetch: true */
+compressSize: 10,
 
-'@/views/merchant/merchant'),
+imageSize: 2,
 
-meta: {
+uploadTask: null,
 
-title: '商户列表',
+media: [], //数据源
 
-},
+formAlbumId: "",
 
-},
+childrenData: [],
 
-{
+allchecked: false,
 
-path: '/merchant/addMerchant',
+selected: [],
 
-name: 'addMerchant',
+albumShow: true,
 
-component: () => import(
+imgMedia: [],
 
-/*webpackChunkName:"merchant"*/
+videoMedia: []
 
-/* webpackPrefetch: true */
-
-'@/views/merchant/merchant/addMerchant'),
-
-meta: {
-
-title: '商户详情',
+};
 
 },
 
-},
+computed: {
 
-{
-
-path: '/merchant/staff',
-
-name: 'merchantStaffList',
-
-component: () => import(
-
-/*webpackChunkName:"merchant"*/
-
-/* webpackPrefetch: true */
-
-'@/views/merchant/staff'),
-
-meta: {
-
-title: '商户员工管理',
-
-icon: '',
+...mapState(["currentChild"]),
 
 },
 
+onLoad(option) {
+
+if (option.id) {
+
+this.albumTitle = option.title;
+
+this.albumId = option.id;
+
+this.formAlbumId = option.id;
+
+}
+
+uni.$on("selectAlbum", ({ id, title }) => {
+
+this.albumTitle = title;
+
+this.albumId = id;
+
+});
+
+const dynamicData = uni.getStorageSync("dynamicData");
+
+if (dynamicData) {
+
+const data = JSON.parse(dynamicData);
+
+this.content = data.content ?? "";
+
+this.media = data.media ?? [];
+
+this.albumId = data.albumId ?? "";
+
+this.albumTitle = data.albumTitle ?? "";
+
+if(this.isImage){
+
+this.imgMedia= JSON.parse(JSON.stringify(data.media)) ?? [];
+
+}else{
+
+this.videoMedia= JSON.parse(JSON.stringify(data.media)) ?? [];
+
+}
+
+}
+
+this.getAllCycle();
+
 },
 
-],
+onUnload() {
+
+uni.$off("selectAlbum");
+
+let params = {};
+
+if (this.content) {
+
+params.content = this.content;
+
+}
+
+if (this.media.length) {
+
+params.media = this.media;
+
+}
+
+if (this.albumId && this.albumId != this.formAlbumId) {
+
+params.albumId = this.albumId;
+
+params.albumTitle = this.albumTitle;
+
+}
+
+if (Object.keys(params).length) {
+
+params.albumId = this.albumId;
+
+params.albumTitle = this.albumTitle;
+
+uni.setStorageSync("dynamicData", JSON.stringify(params));
+
+} else {
+
+uni.setStorageSync("dynamicData", "");
+
+}
 
 },
+
+methods: {
+
+querySelect() {
+
+this.selected = this.childrenData.filter((item) => {
+
+return item.checked;
+
+});
+
+this.showSelectCycle = false;
+
+if (this.selected.length > 1) {
+
+this.albumTitle = "";
+
+this.albumId = "";
+
+this.albumShow = false;
+
+} else {
+
+this.albumShow = true;
+
+}
+
+},
+
+checkboxGroupChange(val) {
+
+if (val.length === this.childrenData.length) {
+
+this.allchecked = true;
+
+}
+
+if (!val.length) {
+
+this.allchecked = false;
+
+}
+
+},
+
+allcheckedChange(val) {
+
+if (val.value) {
+
+this.childrenData.forEach((item) => {
+
+item.checked = true;
+
+});
+
+} else {
+
+this.childrenData.forEach((item) => {
+
+item.checked = false;
+
+});
+
+}
+
+},
+
+getAllCycle() {
+
+this.$api.getMemberByUserId().then((res) => {
+
+this.childrenData = res.data.map((item) => {
+
+return { ...item, checked: false };
+
+});
+
+});
+
+},
+
+selectCycle() {
+
+this.showSelectCycle = true;
+
+},
+
+typeChange() {
+
+this.media = [];
+
+this.$nextTick(()=>{
+
+if(this.isImage){
+
+this.media = JSON.parse(JSON.stringify(this.imgMedia))
+
+}else{
+
+this.media = JSON.parse(JSON.stringify(this.videoMedia))
+
+}
+
+})
+
+},
+
+imgDelete(eq) {
+
+this.media.splice(eq, 1);
+
+if(this.isImage){
+
+this.imgMedia.splice(eq, 1);
+
+}else{
+
+this.videoMedia.splice(eq, 1);
+
+}
+
+},
+
+submit() {
+
+if (this.content.length > 300) {
+
+uni.showToast({
+
+icon: "error",
+
+title: "动态最多只能上传300字",
+
+});
+
+return;
+
+}
+
+if (!this.media || !this.media.length) {
+
+uni.showToast({
+
+icon: "error",
+
+title: "请上传照片",
+
+});
+
+return;
+
+}
+
+const imgList = this.media.filter((item) => {
+
+return item.progress == "上传成功";
+
+});
+
+if (imgList.length != this.media.length) {
+
+uni.showToast({
+
+icon: "none",
+
+title: "存在上传失败或违规图片，请重新尝试",
+
+});
+
+return;
+
+}
+
+if (this.media.length > 20) {
+
+uni.showToast({
+
+icon: "error",
+
+title: "最多上传20张照片",
+
+});
+
+return;
+
+}
+
+const childList = this.childrenData
+
+.filter((item) => {
+
+return item.checked;
+
+})
+
+.map((item) => {
+
+return item.childMemberId;
+
+});
+
+if (!childList.length) {
+
+uni.showToast({
+
+icon: "error",
+
+title: "请选择要发布的家庭圈",
+
+});
+
+return;
+
+}
+
+uni.showLoading({
+
+title: "提交中",
+
+});
+
+let videos = 0;
+
+let photos = 0;
+
+const fileList = JSON.parse(JSON.stringify(this.media));
+
+let photoList = fileList.map((item) => {
+
+if (item.fileType == "image") {
+
+photos++;
+
+return {
+
+...item,
+
+url: item.src,
+
+type: 1,
+
+};
+
+} else {
+
+videos++;
+
+return {
+
+...item,
+
+url: item.videoId,
+
+type: 2,
+
+};
+
+}
+
+});
+
+if (videos > 1 || (videos == 1 && photos)) {
+
+uni.showToast({
+
+icon: "none",
+
+title: "仅支持单视频上传",
+
+});
+
+return;
+
+}
+
+const params = childList.map((item) => {
+
+return {
+
+childFamilyMemberId: item,
+
+photoList: photoList,
+
+albumId: this.albumId,
+
+content: this.content,
+
+videos: videos,
+
+photos: photos,
+
+};
+
+});
+
+this.$api
+
+.pushDynamic(params)
+
+.then((res) => {
+
+uni.hideLoading();
+
+uni.$emit("refreshDynamic");
+
+uni.$emit("refreshAlbum");
+
+this.content = "";
+
+this.media = [];
+
+this.albumId = "";
+
+this.albumTitle = "";
+
+uni.navigateBack();
+
+})
+
+.catch((err) => {
+
+uni.hideLoading();
+
+});
+
+},
+
+//上传
+
+chooseFile(e) {
+
+this.uploadFileToServe(e);
+
+},
+
+//上传逻辑处理
+
+async uploadFileToServe(urlList) {
+
+if (!urlList || urlList.length <= 0) {
+
+return;
+
+}
 
   
 
-// 区域管理
+if (urlList[0].fileType == "image") {
 
-{
+let promiseList = [];
 
-path: '/region',
+urlList.forEach((item) => {
 
-component: Layout,
+let response = "";
 
-meta: {
+item.tempFilePaths = [item.src];
 
-title: '区域管理',
+let promiseItem = new Promise(async (resolve, reject) => {
 
-icon: 'region',
+response = await uploadFile(item);
+
+let videoPhoto = null;
+
+const checkResult = await this.$api.imageSyncScan({
+
+urls: [response],
+
+});
+
+if (!checkResult.data[0].passed) {
+
+item.status = "error";
+
+item.progress = "上传违规";
+
+item.src = "";
+
+resolve(item);
+
+return;
+
+}
+
+item.playTime = item.duration;
+
+item.videoPhoto = videoPhoto;
+
+item.status = "success";
+
+item.progress = "上传成功";
+
+item.src = response;
+
+resolve(item);
+
+});
+
+promiseList.push(promiseItem);
+
+});
+
+Promise.all(promiseList).then((resList) => {
+
+this.media.push(...resList);
+
+if(this.isImage){
+
+this.imgMedia.push(...resList);
+
+}else{
+
+this.videoMedia.push(...resList);
+
+}
+
+});
+
+} else {
+
+let videoPhoto = null;
+
+let response = "";
+
+const res = await uploadVideo({
+
+url: urlList[0].src,
+
+coverUrl: urlList[0].thumbTempFilePath,
+
+});
+
+urlList[0].tempFilePaths = [urlList[0].src];
+
+response = res.videoId;
+
+urlList[0].tempFilePaths = [urlList[0].thumbTempFilePath];
+
+videoPhoto = await uploadFile(urlList[0]);
+
+const checkResult = await this.$api.imageSyncScan({
+
+urls: [videoPhoto],
+
+});
+
+if (!checkResult.data[0].passed) {
+
+urlList[0].status = "error";
+
+urlList[0].progress = "上传违规";
+
+urlList[0].src = "";
+
+this.media.push(urlList[0]);
+
+if(this.isImage){
+
+this.imgMedia.push(urlList[0]);
+
+}else{
+
+this.videoMedia.push(urlList[0]);
+
+}
+
+return;
+
+}
+
+urlList[0].videoId = response;
+
+urlList[0].playTime = urlList[0].duration;
+
+urlList[0].videoPhoto = videoPhoto;
+
+urlList[0].status = "success";
+
+urlList[0].progress = "上传成功";
+
+this.media.push(urlList[0]);
+
+if(this.isImage){
+
+this.imgMedia.push(urlList[0]);
+
+}else{
+
+this.videoMedia.push(urlList[0]);
+
+}
+
+}
 
 },
 
-redirect: {
+selectAlbum() {
 
-name: 'regionList',
+uni.navigateTo({
 
-},
+url: `/pagesA/albumEdit/selectAlbum?type=dynamic`,
 
-children: [{
-
-path: '/region/index',
-
-name: 'regionList',
-
-component: () => import(
-
-/*webpackChunkName:"region"*/
-
-/* webpackPrefetch: true */
-
-'@/views/region/index'),
-
-meta: {
-
-title: '区域列表',
-
-icon: '',
+});
 
 },
 
 },
 
-{
+};
 
-path: '/region/accountList',
-
-name: 'regionAccountList',
-
-component: () => import(
-
-/*webpackChunkName:"region"*/
-
-/* webpackPrefetch: true */
-
-'@/views/region/accountList'),
-
-meta: {
-
-title: '区域账号列表',
-
-icon: '',
-
-},
-
-}],
-
-},
+</script>
 
   
 
-// C端用户管理
+<style lang="scss" scoped>
 
-{
+.radio-label {
 
-path: '/customer',
+display: flex;
 
-component: Layout,
+justify-content: space-between;
 
-redirect: '/customer/index',
+width: 85vw;
 
-meta: {
+padding: 32rpx;
 
-title: 'C端用户管理',
+image {
 
-icon: '',
+width: 64rpx;
 
-},
+height: 64rpx;
 
-children: [
+border-radius: 32rpx;
 
-{
+}
 
-path: '/customer/index',
+.name {
 
-name: 'customerList',
+line-height: 64rpx;
 
-component: () => import(
+}
 
-/*webpackChunkName:"customer"*/
+}
 
-/* webpackPrefetch: true */
+.textarea-box {
 
-'@/views/customer/index'),
+position: relative;
 
-meta: {
+padding-bottom: 40rpx;
 
-title: 'C端用户列表',
+.textarea-num {
 
-icon: '',
+position: absolute;
 
-},
+right: 20rpx;
 
-},
+bottom: 20rpx;
 
-{
+font-family: PingFang SC Medium;
 
-path: '/clientUser/detail/:id',
+font-size: 20rpx;
 
-name: 'clientUserDetail',
+font-weight: normal;
 
-component: () => import(
-
-/*webpackChunkName:"customer"*/
-
-/* webpackPrefetch: true */
-
-'@/views/customer/detail'),
-
-meta: {
-
-title: 'C端用户详情',
-
-icon: '',
-
-},
-
-},
-
-],
-
-},
+letter-spacing: 0em;
 
   
 
-// 平台配置
+/* 中性色G50 */
 
-{
+color: #bfbfbf;
 
-path: '/settings',
+}
 
-component: Layout,
+}
 
-meta: {
+.content {
 
-title: '平台配置',
+padding: 12rpx 36rpx;
 
-icon: '',
+}
 
-},
+.select-all {
 
-redirect: {
+padding: 12rpx 36rpx;
 
-name: 'settingsMenuList',
+}
 
-},
+.bottom-box {
 
-children: [
+position: fixed;
 
-{
+bottom: 50rpx;
 
-path: '/settings/menuList',
-
-name: 'settingsMenuList',
-
-component: () => import(
-
-/*webpackChunkName:"settings"*/
-
-/* webpackPrefetch: true */
-
-'@/views/settings/menuList'),
-
-meta: {
-
-title: '菜单配置',
-
-icon: '',
-
-},
-
-},
-
-{
-
-path: '/settings/merchantRoleTemplate',
-
-name: 'merchantRoleTemplateList',
-
-component: () => import(
-
-/*webpackChunkName:"settings"*/
-
-/* webpackPrefetch: true */
-
-'@/views/settings/merchantRoleTemplate'),
-
-meta: {
-
-title: '预设角色',
-
-icon: '',
-
-},
-
-},
-
-{
-
-path: '/settings/category',
-
-name: 'categoryList',
-
-component: () => import(
-
-/*webpackChunkName:"settings"*/
-
-/* webpackPrefetch: true */
-
-'@/views/settings/category'),
-
-meta: {
-
-title: '平台分类',
-
-icon: '',
-
-},
-
-},
-
-{
-
-path: '/settings/label',
-
-name: 'labelList',
-
-component: () => import(
-
-/*webpackChunkName:"settings"*/
-
-/* webpackPrefetch: true */
-
-'@/views/settings/label'),
-
-meta: {
-
-title: '平台标签',
-
-icon: '',
-
-},
-
-},
-
-{
-
-path: '/settings/versionManagement',
-
-name: 'settingsVersionManagement',
-
-component: () => import(
-
-/*webpackChunkName:"settings"*/
-
-/* webpackPrefetch: true */
-
-'@/views/settings/versionManagement'),
-
-meta: {
-
-title: '版本管理',
-
-icon: '',
-
-},
-
-},
-
-],
-
-},
+width: calc(100vw - 64rpx);
 
   
 
-// 日志管理
+.btn {
 
-{
+width: 622rpx;
 
-path: '/log',
+height: 84rpx;
 
-component: Layout,
+margin: 0 auto;
 
-redirect: '/log/index',
+text-align: center;
 
-meta: {
+border-radius: 306px;
 
-title: '日志管理',
+background: #6c86fa;
 
-icon: '',
+line-height: 84rpx;
 
-},
+font-family: PingFangSC-Medium;
 
-children: [{
+font-size: 32rpx;
 
-path: '/log/index',
+font-weight: normal;
 
-name: 'logList',
+letter-spacing: 0px;
 
-component: () => import(
+color: #ffffff;
 
-/*webpackChunkName:"log"*/
+}
 
-/* webpackPrefetch: true */
-
-'@/views/log'),
-
-meta: {
-
-title: '日志管理',
-
-icon: '',
-
-},
-
-}],
-
-},
+}
 
   
 
-// 运营管理
+.main {
 
-{
+padding: 32rpx;
 
-path: '/operation',
+padding-bottom: 130rpx;
 
-name: 'layout',
+}
 
-redirect: '/enjoOrder/index',
+  
 
-component: Layout,
+.tip {
 
-meta: {
+font-family: PingFangSC-Regular;
 
-title: '运营管理',
+font-size: 20rpx;
 
-icon: '',
+font-weight: normal;
 
-},
+letter-spacing: 0em;
 
-children: [
+  
 
-{
+/* 中性色G50 */
 
-path: '/enjoOrder/index',
+color: #bfbfbf;
 
-name: 'orderList',
+  
 
-component: () => import(
+margin-bottom: 80rpx;
 
-/*webpackChunkName:"enjoOrder"*/
+}
 
-/* webpackPrefetch: true */
+  
 
-'@/views/enjoOrder'),
+.select-album {
 
-meta: {
+display: flex;
 
-title: '订单管理',
+justify-content: space-between;
 
-icon: '',
+font-family: PingFangSC-Regular;
 
-},
+font-size: 28rpx;
 
-},
+font-weight: normal;
 
-{
+letter-spacing: 0em;
 
-path: 'enjoPreview',
+border-bottom: 1rpx solid #d9d9d9;
 
-name: 'previewEnjoOrder',
+padding: 32rpx 0;
 
-component: () => import(
+  
 
-/*webpackChunkName:"enjoOrder"*/
+.select-item-start {
 
-/* webpackPrefetch: true */
+display: flex;
 
-'@/views/enjoOrder/preview'),
+justify-content: flex-start;
 
-hidden: true,
+color: #000000;
 
-meta: {
+  
 
-title: '查看订单',
+view {
 
-icon: 'order',
+display: inline-block;
 
-},
+vertical-align: middle;
 
-},
+}
 
-{
+  
 
-path: '/goodsLib/index',
+.icon {
 
-name: 'goodsLibList',
+font-size: 32rpx;
 
-component: () => import(
+margin-right: 16rpx;
 
-/*webpackChunkName:"goodsLib"*/
+color: #bfbfbf;
 
-/* webpackPrefetch: true */
+}
 
-'@/views/goodsLib'),
+}
 
-meta: {
+  
 
-title: '平台商品库列表',
+.select-item-end {
 
-},
+display: flex;
 
-},
+justify-content: flex-end;
 
-{
+color: #585858;
 
-path: '/goodsLib/create',
+  
 
-name: 'goodsLibDetail',
+view {
 
-component: () => import(
+display: inline-block;
 
-/*webpackChunkName:"goodsLib"*/
+vertical-align: middle;
 
-/* webpackPrefetch: true */
+}
 
-'@/views/goodsLib/create'),
+  
 
-meta: {
+image {
 
-title: '查看商品库商品',
+width: 9rpx;
 
-},
+height: 18rpx;
 
-},
+margin-left: 22rpx;
 
-{
+}
 
-path: '/coupon/index',
+}
 
-name: 'couponList',
+}
 
-component: () => import(
+.cycle-header {
 
-/*webpackChunkName:"coupon"*/
+display: flex;
 
-/* webpackPrefetch: true */
+justify-content: space-between;
 
-'@/views/coupon/index'),
+width: 100%;
 
-meta: {
+height: 84rpx;
 
-title: '优惠券列表',
+padding: 28rpx 32rpx;
 
-},
+}
 
-},
+.cycle-cancel {
 
-{
+font-size: 30rpx;
 
-path: '/coupon/couponAdd',
+font-family: PingFang SC;
 
-name: 'couponDetail',
+font-weight: normal;
 
-component: () => import(
+color: #585858;
 
-/*webpackChunkName:"coupon"*/
+}
 
-/* webpackPrefetch: true */
+.cycle-title {
 
-'@/views/coupon/create'),
+font-size: 30rpx;
 
-meta: {
+font-family: PingFang SC;
 
-title: '优惠券详情',
+font-weight: normal;
 
-},
+color: #000000;
 
-},
+}
 
-],
+.cycle-confirm {
 
-}]
+font-size: 30rpx;
+
+font-family: PingFang SC;
+
+font-weight: normal;
+
+color: #585858;
+
+}
+
+.min-avatar {
+
+width: 48rpx !important;
+
+height: 48rpx !important;
+
+border-radius: 24rpx !important;
+
+margin-right: 16rpx !important;
+
+}
+
+</style>
+```
+
+
+
+```
+<text v-if="data.status == 'CANCELLED'">已取消</text>
+```
