@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.笔记/如何理解MVVM.md",
+                "file": "2.笔记/vue的优点.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2.笔记/如何理解MVVM.md",
+                "file": "2.笔记/vue的优点.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,9 +107,10 @@
   "active": "0606627602642635",
   "lastOpenFiles": [
     "1.索引/VUE.md",
+    "2.笔记/vue的优点.md",
+    "2.笔记/Vue响应式.md",
     "2.笔记/如何理解MVVM.md",
     "3.附件/README.md",
-    "2.笔记/Vue响应式.md",
     "3.附件/c端接口.md",
     "3.附件/平台接口.md",
     "3.附件/687474703a2f2f6f73732e7469616e6d6173706f72742e636f6d2f67782f73697a652f323032322d30332d31312f3139362f3935313830333232353333363434363937362e706e67.png",
