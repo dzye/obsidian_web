@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.笔记/vue生命周期相关.md",
+                "file": "2.笔记/Vue双向绑定原理.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2.笔记/vue生命周期相关.md",
+                "file": "2.笔记/Vue双向绑定原理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,7 +107,10 @@
   "active": "0606627602642635",
   "lastOpenFiles": [
     "1.索引/VUE.md",
+    "2.笔记/Vue双向绑定原理.md",
     "2.笔记/vue生命周期相关.md",
+    "3.附件/Pasted image 20230409102033.png",
+    "3.附件/Pasted image 20230409102015.png",
     "2.笔记/生命周期.md",
     "2.笔记/vue的优点.md",
     "2.笔记/Vue响应式.md",
