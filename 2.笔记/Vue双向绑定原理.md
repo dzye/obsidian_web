@@ -1,2 +1,4 @@
-1. vue2 发布订阅方式 实现 Object.defindProperty
-2. vue3
+1. vue2 Object.defindProperty,vue3 proxy
+
+
+具体实现待补充
