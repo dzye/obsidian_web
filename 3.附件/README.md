@@ -1252,3 +1252,32 @@ margin-right: 16rpx !important;
 2.  学员管理页面课时动态页面开发完成
 3.  班级管理列表页面开发完成
 4.  班级管理新增页面开发部分完成
+
+
+
+
+this.$api.getCouponRemind().then(res => {
+
+uni.showTabBarRedDot(
+
+{
+
+index: 3,
+
+success: function () {
+
+console.log('success');
+
+},
+
+success: function (e) {
+
+console.log(e);
+
+},
+
+}
+
+)
+
+})
