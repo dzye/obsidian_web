@@ -82,3 +82,12 @@
     transform: translate(-50%,-50%);
   }
 </style>
+
+
+
+:class="{ gray: !product_info.stocks }"
+.gray {
+
+color: rgba(255, 255, 255, 0.5) !important;
+
+}
