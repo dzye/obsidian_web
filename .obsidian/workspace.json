@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.笔记/什么是React.md",
+                "file": "2.笔记/为什么React要使用JSX.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2.笔记/什么是React.md",
+                "file": "2.笔记/为什么React要使用JSX.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,8 @@
   },
   "active": "957288c1d2f45cf1",
   "lastOpenFiles": [
-    "2.笔记/React.md",
+    "1.索引/React.md",
+    "2.笔记/为什么React要使用JSX.md",
     "2.笔记/什么是React.md",
     "1.索引/面试.md",
     "2.笔记/运行时Chunk加载分析.md",
