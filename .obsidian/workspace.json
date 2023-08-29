@@ -11,8 +11,12 @@
             "id": "957288c1d2f45cf1",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "2.笔记/什么是React.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "2.笔记/什么是React.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,6 +114,9 @@
   },
   "active": "957288c1d2f45cf1",
   "lastOpenFiles": [
+    "2.笔记/React.md",
+    "2.笔记/什么是React.md",
+    "1.索引/面试.md",
     "2.笔记/运行时Chunk加载分析.md",
     "3.附件/README.md",
     "3.附件/687474703a2f2f6f73732e7469616e6d6173706f72742e636f6d2f67782f73697a652f323032322d30332d31312f3139362f3935313830333232353333363434363937362e706e67.png",
