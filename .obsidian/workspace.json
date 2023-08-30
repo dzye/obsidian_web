@@ -20,12 +20,12 @@
             }
           },
           {
-            "id": "3ee499654aba2f08",
+            "id": "e1a6e0f212db0760",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.笔记/列举一种你了解的React状态管理框架.md",
+                "file": "2.笔记/Virtual Dom 工作原理.md",
                 "mode": "source",
                 "source": false
               }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2.笔记/列举一种你了解的React状态管理框架.md",
+                "file": "2.笔记/Virtual Dom 工作原理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,9 +149,10 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "3ee499654aba2f08",
+  "active": "e1a6e0f212db0760",
   "lastOpenFiles": [
     "1.索引/React.md",
+    "2.笔记/Virtual Dom 工作原理.md",
     "2.笔记/列举一种你了解的React状态管理框架.md",
     "2.笔记/如何面向组件跨层级通信.md",
     "2.笔记/setState是同步更新还是异步更新.md",
@@ -180,7 +181,6 @@
     "2.笔记/Vue响应式.md",
     "2.笔记/如何理解MVVM.md",
     "2.笔记/未命名.md",
-    "1.索引/html.md",
-    "1.索引/ES6+.md"
+    "1.索引/html.md"
   ]
 }
