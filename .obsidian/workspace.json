@@ -128,7 +128,7 @@
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               }
             }
@@ -149,7 +149,7 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "47d9bd0f6fbd2729",
+  "active": "4c6e1e35653f5d48",
   "lastOpenFiles": [
     "1.索引/React.md",
     "2.笔记/类组件与函数组件有什么区别.md",
