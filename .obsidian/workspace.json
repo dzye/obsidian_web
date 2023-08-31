@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2.笔记/类组件与函数组件有什么区别.md",
+                "file": "2.笔记/如何解释React的渲染流程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,8 +125,9 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "47d9bd0f6fbd2729",
+  "active": "cd6c214b7c80ea14",
   "lastOpenFiles": [
+    "2.笔记/类组件与函数组件有什么区别.md",
     "1.索引/React.md",
     "2.笔记/如何解释React的渲染流程.md",
     "2.笔记/列举一种你了解的React状态管理框架.md",
@@ -139,7 +141,6 @@
     "3.附件/Pasted image 20230409102015.png",
     "3.附件/Pasted image 20220427225855.png",
     "3.附件/687474703a2f2f6f73732e7469616e6d6173706f72742e636f6d2f67782f73697a652f323032322d30332d31312f3139362f3935313830333232353333363434363937362e706e67.png",
-    "2.笔记/类组件与函数组件有什么区别.md",
     "2.笔记/如何避免生命周期中的坑.md",
     "2.笔记/为什么React要使用JSX.md",
     "2.笔记/关注点分离.md",
