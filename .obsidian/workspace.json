@@ -25,14 +25,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.笔记/如何解释React的渲染流程.md",
+                "file": "1.索引/React.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1bf35b81a1100a25",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2.笔记/React渲染异常会造成什么后果.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2.笔记/如何解释React的渲染流程.md",
+                "file": "2.笔记/React渲染异常会造成什么后果.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,11 +137,12 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "cd6c214b7c80ea14",
+  "active": "1bf35b81a1100a25",
   "lastOpenFiles": [
-    "2.笔记/类组件与函数组件有什么区别.md",
     "1.索引/React.md",
+    "2.笔记/React渲染异常会造成什么后果.md",
     "2.笔记/如何解释React的渲染流程.md",
+    "2.笔记/类组件与函数组件有什么区别.md",
     "2.笔记/列举一种你了解的React状态管理框架.md",
     "2.笔记/对比其他框架，React的diff算法有何不同.md",
     "2.笔记/如何面向组件跨层级通信.md",
@@ -156,7 +169,6 @@
     "2.笔记/vue生命周期相关.md",
     "2.笔记/生命周期.md",
     "2.笔记/vue的优点.md",
-    "2.笔记/Vue响应式.md",
-    "2.笔记/如何理解MVVM.md"
+    "2.笔记/Vue响应式.md"
   ]
 }
