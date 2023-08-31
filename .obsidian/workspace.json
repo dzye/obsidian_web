@@ -13,38 +13,25 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.笔记/列举一种你了解的React状态管理框架.md",
+                "file": "2.笔记/类组件与函数组件有什么区别.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "6db2de7b577e842d",
+            "id": "cd6c214b7c80ea14",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.笔记/对比其他框架，React的diff算法有何不同.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e1a6e0f212db0760",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2.笔记/Virtual Dom 工作原理.md",
+                "file": "2.笔记/如何解释React的渲染流程.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2.笔记/对比其他框架，React的diff算法有何不同.md",
+                "file": "2.笔记/类组件与函数组件有什么区别.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,13 +124,14 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "6db2de7b577e842d",
+  "active": "47d9bd0f6fbd2729",
   "lastOpenFiles": [
-    "2.笔记/列举一种你了解的React状态管理框架.md",
     "1.索引/React.md",
+    "2.笔记/如何解释React的渲染流程.md",
+    "2.笔记/列举一种你了解的React状态管理框架.md",
+    "2.笔记/对比其他框架，React的diff算法有何不同.md",
     "2.笔记/如何面向组件跨层级通信.md",
     "2.笔记/setState是同步更新还是异步更新.md",
-    "2.笔记/对比其他框架，React的diff算法有何不同.md",
     "2.笔记/Virtual Dom 工作原理.md",
     "2.笔记/如何设计React组件.md",
     "3.附件/Pasted image 20230409102033.png",
@@ -168,7 +156,6 @@
     "2.笔记/生命周期.md",
     "2.笔记/vue的优点.md",
     "2.笔记/Vue响应式.md",
-    "2.笔记/如何理解MVVM.md",
-    "2.笔记/未命名.md"
+    "2.笔记/如何理解MVVM.md"
   ]
 }
