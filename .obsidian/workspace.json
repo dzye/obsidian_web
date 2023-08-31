@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1.索引/React.md",
+                "file": "2.笔记/对比其他框架，React的diff算法有何不同.md",
                 "mode": "source",
                 "source": false
               }
@@ -43,8 +43,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -137,7 +136,7 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "6db2de7b577e842d",
+  "active": "47d9bd0f6fbd2729",
   "lastOpenFiles": [
     "1.索引/React.md",
     "2.笔记/对比其他框架，React的diff算法有何不同.md",
