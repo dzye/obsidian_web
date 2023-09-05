@@ -23,4 +23,6 @@
 
 #### 可维护的依从性
 代码规范 发布规范
-遵循约定提升代码ke'du'xing
+遵循约定提升代码可读性
+减少人为因素
+加强工具干预：Eslint stylelint commitlint editorconfig prettier
