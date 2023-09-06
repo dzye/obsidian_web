@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.笔记/谈谈React Hook的设计模式.md",
+                "file": "2.笔记/如何避免生命周期中的坑.md",
                 "mode": "source",
                 "source": false
               }
@@ -121,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2.笔记/谈谈React Hook的设计模式.md",
+                "file": "2.笔记/如何避免生命周期中的坑.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,6 +151,7 @@
   "active": "957288c1d2f45cf1",
   "lastOpenFiles": [
     "1.索引/React.md",
+    "2.笔记/类组件与函数组件有什么区别.md",
     "2.笔记/谈谈React Hook的设计模式.md",
     "2.笔记/useEffect和useLayoutEffect的区别.md",
     "2.笔记/React Hook 的使用限制有哪些.md",
@@ -164,7 +165,6 @@
     "2.笔记/如何分析和调优性能瓶颈.md",
     "2.笔记/Vue响应式.md",
     "2.笔记/React渲染异常会造成什么后果.md",
-    "2.笔记/类组件与函数组件有什么区别.md",
     "2.笔记/对比其他框架，React的diff算法有何不同.md",
     "1.索引/面试.md",
     "2.笔记/Virtual Dom 工作原理.md",
