@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.笔记/如何避免生命周期中的坑.md",
+                "file": "2.笔记/谈谈React Hook的设计模式.md",
                 "mode": "source",
                 "source": false
               }
@@ -121,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2.笔记/如何避免生命周期中的坑.md",
+                "file": "2.笔记/谈谈React Hook的设计模式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,6 +151,7 @@
   "active": "957288c1d2f45cf1",
   "lastOpenFiles": [
     "1.索引/React.md",
+    "2.笔记/如何避免生命周期中的坑.md",
     "2.笔记/类组件与函数组件有什么区别.md",
     "2.笔记/谈谈React Hook的设计模式.md",
     "2.笔记/useEffect和useLayoutEffect的区别.md",
@@ -172,7 +173,6 @@
     "2.笔记/如何设计React组件.md",
     "2.笔记/列举一种你了解的React状态管理框架.md",
     "2.笔记/setState是同步更新还是异步更新.md",
-    "2.笔记/如何避免生命周期中的坑.md",
     "2.笔记/为什么React要使用JSX.md",
     "2.笔记/关注点分离.md",
     "2.笔记/什么是React.md",
