@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1.索引/html.md",
+                "file": "2.笔记/HTML语义化标签.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2.笔记/h5新特性.md",
+                "file": "2.笔记/HTML语义化标签.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +124,7 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "4657eddcc678dd0f",
+  "active": "4eb4384708f821b3",
   "lastOpenFiles": [
     "1.索引/html.md",
     "2.笔记/h5新特性.md",
