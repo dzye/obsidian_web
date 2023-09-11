@@ -4,11 +4,57 @@
     "type": "split",
     "children": [
       {
-        "id": "5d0080d9a9ad4866",
+        "id": "e237492c5ab83964",
         "type": "tabs",
         "children": [
           {
-            "id": "4eb4384708f821b3",
+            "id": "47d9bd0f6fbd2729",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2.笔记/类组件与函数组件有什么区别.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cd6c214b7c80ea14",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1.索引/React.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d55426519a68b46c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2.笔记/如何避免重渲染.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4c666885eb49ec3b",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.4.5"
+              }
+            }
+          },
+          {
+            "id": "6a78f96d6f8840c4",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,31 +66,31 @@
             }
           },
           {
-            "id": "8e4408b39e1ea4a9",
+            "id": "964625728f80da77",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.笔记/常见的浏览器内核有哪些.md",
+                "file": "2.笔记/如何分析和调优性能瓶颈.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "4657eddcc678dd0f",
+            "id": "1bf35b81a1100a25",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2.笔记/h5新特性.md",
+                "file": "2.笔记/React渲染异常会造成什么后果.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -110,13 +156,13 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2.笔记/常见的浏览器内核有哪些.md",
+                "file": "1.索引/html.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               }
             }
@@ -137,38 +183,38 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "8e4408b39e1ea4a9",
+  "active": "6a78f96d6f8840c4",
   "lastOpenFiles": [
-    "1.索引/html.md",
-    "2.笔记/常见的浏览器内核有哪些.md",
-    "2.笔记/引入样式时，link和@import的区别.md",
-    "2.笔记/HTML语义化标签.md",
-    "2.笔记/h5新特性.md",
-    "2.笔记/关注点分离.md",
-    "2.笔记/如何避免生命周期中的坑.md",
-    "2.笔记/如何提高React代码可维护性.md",
+    "1.索引/JavaScript高级.md",
+    "1.索引/Typescript.md",
     "1.索引/React.md",
-    "2.笔记/React 中常用的工具库有哪些.md",
-    "2.笔记/React-Router 的实现原理以及工作方式.md",
+    "1.索引/ES6+.md",
+    "1.索引/前端工程化.md",
+    "1.索引/CSS.md",
+    "1.索引/html.md",
+    "conflict-files-obsidian-git.md",
     "2.笔记/谈谈React Hook的设计模式.md",
-    "2.笔记/类组件与函数组件有什么区别.md",
+    "2.笔记/引入样式时，link和@import的区别.md",
+    "2.笔记/常见的浏览器内核有哪些.md",
+    "2.笔记/如何提高React代码可维护性.md",
     "2.笔记/useEffect和useLayoutEffect的区别.md",
+    "2.笔记/h5新特性.md",
+    "2.笔记/React-Router 的实现原理以及工作方式.md",
+    "2.笔记/React 中常用的工具库有哪些.md",
     "2.笔记/React Hook 的使用限制有哪些.md",
     "2.笔记/如何避免重渲染.md",
-    "conflict-files-obsidian-git.md",
-    "3.附件/README.md",
-    "2.笔记/生命周期.md",
-    "2.笔记/未命名.md",
-    "2.笔记/如何解释React的渲染流程.md",
     "2.笔记/如何分析和调优性能瓶颈.md",
-    "2.笔记/Vue响应式.md",
     "2.笔记/React渲染异常会造成什么后果.md",
+    "2.笔记/如何解释React的渲染流程.md",
+    "2.笔记/类组件与函数组件有什么区别.md",
+    "2.笔记/列举一种你了解的React状态管理框架.md",
     "2.笔记/对比其他框架，React的diff算法有何不同.md",
-    "1.索引/面试.md",
-    "3.附件/687474703a2f2f6f73732e7469616e6d6173706f72742e636f6d2f67782f73697a652f323032322d30332d31312f3139362f3935313830333232353333363434363937362e706e67.png",
+    "2.笔记/如何面向组件跨层级通信.md",
+    "2.笔记/setState是同步更新还是异步更新.md",
     "3.附件/Pasted image 20230409102033.png",
-    "3.附件/Pasted image 20230409102015.png",
     "3.附件/Pasted image 20220427231219.png",
-    "3.附件/Pasted image 20220427225855.png"
+    "3.附件/Pasted image 20230409102015.png",
+    "3.附件/Pasted image 20220427225855.png",
+    "3.附件/687474703a2f2f6f73732e7469616e6d6173706f72742e636f6d2f67782f73697a652f323032322d30332d31312f3139362f3935313830333232353333363434363937362e706e67.png"
   ]
 }
