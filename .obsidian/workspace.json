@@ -20,6 +20,30 @@
             }
           },
           {
+            "id": "1da57012ce8bd0ca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2.笔记/canvas和svg的区别.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "24b308fb3dab562a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2.笔记/前端需要注意哪些SEO.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "6e0474365faf09fc",
             "type": "leaf",
             "state": {
@@ -230,7 +254,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2.笔记/web标准和w3c标准.md",
+                "file": "2.笔记/canvas和svg的区别.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -257,9 +281,11 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "6e0474365faf09fc",
+  "active": "1da57012ce8bd0ca",
   "lastOpenFiles": [
     "1.索引/html.md",
+    "2.笔记/canvas和svg的区别.md",
+    "2.笔记/前端需要注意哪些SEO.md",
     "2.笔记/web标准和w3c标准.md",
     "2.笔记/块级元素、行内元素、行内块元素.md",
     "2.笔记/video标签的几个属性方法.md",
@@ -283,8 +309,6 @@
     "2.笔记/React-Router 的实现原理以及工作方式.md",
     "2.笔记/谈谈React Hook的设计模式.md",
     "2.笔记/类组件与函数组件有什么区别.md",
-    "2.笔记/useEffect和useLayoutEffect的区别.md",
-    "2.笔记/React Hook 的使用限制有哪些.md",
     "3.附件/687474703a2f2f6f73732e7469616e6d6173706f72742e636f6d2f67782f73697a652f323032322d30332d31312f3139362f3935313830333232353333363434363937362e706e67.png",
     "3.附件/Pasted image 20230409102033.png",
     "3.附件/Pasted image 20230409102015.png",
