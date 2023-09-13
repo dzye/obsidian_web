@@ -20,6 +20,114 @@
             }
           },
           {
+            "id": "6e0474365faf09fc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2.笔记/web标准和w3c标准.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d930db81e0bccc02",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2.笔记/块级元素、行内元素、行内块元素.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "66ead23d9f63356b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2.笔记/video标签的几个属性方法.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b48f77ba53a8967a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2.笔记/a标签中 如何禁用href 跳转页面 或 定位链接?.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8fb161cfe340594b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2.笔记/meta标签的name属性值？.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cf3e5c49efede02b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2.笔记/viewport 所有属性？.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b748d54856681821",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2.笔记/网页制作会用到的图片格式有哪些？.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "01401e69f1f948b7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2.笔记/浏览器页面有哪三层构成，分别是什么，作用是什么?.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f84fc4b1a05268bc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2.笔记/元素的alt和title有什么不同？.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "54a4ed54bac8262f",
             "type": "leaf",
             "state": {
@@ -55,7 +163,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -121,7 +230,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1.索引/html.md",
+                "file": "2.笔记/web标准和w3c标准.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,10 +257,19 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "4eb4384708f821b3",
+  "active": "6e0474365faf09fc",
   "lastOpenFiles": [
-    "2.笔记/title与h1的区别、b与strong的区别、i与em的区别?.md",
     "1.索引/html.md",
+    "2.笔记/web标准和w3c标准.md",
+    "2.笔记/块级元素、行内元素、行内块元素.md",
+    "2.笔记/video标签的几个属性方法.md",
+    "2.笔记/a标签中 如何禁用href 跳转页面 或 定位链接?.md",
+    "2.笔记/meta标签的name属性值？.md",
+    "2.笔记/viewport 所有属性？.md",
+    "2.笔记/网页制作会用到的图片格式有哪些？.md",
+    "2.笔记/浏览器页面有哪三层构成，分别是什么，作用是什么?.md",
+    "2.笔记/元素的alt和title有什么不同？.md",
+    "2.笔记/title与h1的区别、b与strong的区别、i与em的区别?.md",
     "2.笔记/label标签的作用是什么? 是怎么用的?.md",
     "2.笔记/常见的浏览器内核有哪些.md",
     "2.笔记/引入样式时，link和@import的区别.md",
@@ -167,15 +285,6 @@
     "2.笔记/类组件与函数组件有什么区别.md",
     "2.笔记/useEffect和useLayoutEffect的区别.md",
     "2.笔记/React Hook 的使用限制有哪些.md",
-    "2.笔记/如何避免重渲染.md",
-    "conflict-files-obsidian-git.md",
-    "3.附件/README.md",
-    "2.笔记/生命周期.md",
-    "2.笔记/未命名.md",
-    "2.笔记/如何解释React的渲染流程.md",
-    "2.笔记/如何分析和调优性能瓶颈.md",
-    "2.笔记/Vue响应式.md",
-    "2.笔记/React渲染异常会造成什么后果.md",
     "3.附件/687474703a2f2f6f73732e7469616e6d6173706f72742e636f6d2f67782f73697a652f323032322d30332d31312f3139362f3935313830333232353333363434363937362e706e67.png",
     "3.附件/Pasted image 20230409102033.png",
     "3.附件/Pasted image 20230409102015.png",
